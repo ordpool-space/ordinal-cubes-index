@@ -1,0 +1,50 @@
+name: Grind for cubes
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # hourly at :17 — avoid the global :00 spike
+  workflow_dispatch:
+    inputs:
+      max_iterations:
+        description: "How many inscriptions to walk this run"
+        default: "5000"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grind
+  cancel-in-progress: false
+
+jobs:
+  grind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Grind
+        env:
+          MAX_ITERATIONS: ${{ inputs.max_iterations || '5000' }}
+        run: npm run grind
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/cubes.json data/cursor.json
+
+          if git diff --cached --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          total=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/cubes.json','utf8')).length)")
+          cursor_num=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/cursor.json','utf8')).lastScannedNumber)")
+          git commit -m "chore: grind run — $total cubes, cursor at #$cursor_num"
+          git push

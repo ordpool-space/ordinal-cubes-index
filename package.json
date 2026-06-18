@@ -1,0 +1,13 @@
+{
+  "name": "ordinal-cubes-index",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "grind": "node scripts/grind.mjs"
+  }
+}
