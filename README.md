@@ -8,15 +8,16 @@ A GitHub Action walks our own ord instance (`ord.ordpool.space`) forward via the
 
 ## Data shape
 
-`data/cubes.json` is an array sorted by inscription number ascending. Cube 0 is the genesis cube (a cursed inscription at number −265038).
+`data/cubes.json` is an array sorted by block height + inscription number ascending. Cube 0 is the genesis cube.
+Three different versions have been released so far, each with minor bug fixes and improvements. A v4 might be released, but that's not certain.
 
 ```json
 {
-  "inscriptionId": "72cb9bcb673652e9bf41d562920371e27dcfa39904cb7e96c45faad70b07f0e2i0",
-  "inscriptionNumber": -265038,
-  "blockHeight": 814583,
-  "timestamp": 1698704842,
-  "contentLength": 613,
+  "inscriptionId": "f1997166547da9784a3e7419d2b248551565211811d4f5e705b685efa244451fi0",
+  "inscriptionNumber": 13271890,
+  "blockHeight": 795579,
+  "timestamp": 1687527225,
+  "contentLength": 557,
   "attributes": [
     { "trait_type": "Side 1", "value": "<inscription id>" },
     { "trait_type": "Side 2", "value": "<inscription id>" },
@@ -25,9 +26,9 @@ A GitHub Action walks our own ord instance (`ord.ordpool.space`) forward via the
     { "trait_type": "Side 5", "value": "<inscription id>" },
     { "trait_type": "Side 6", "value": "<inscription id>" },
     { "trait_type": "Version", "value": "v1" },
-    { "trait_type": "Title", "value": "itsdonny x Johannes, rat sat" }
+    { "trait_type": "Title", "Optional Title, introduced in later versions" }
   ],
-  "name": "Ordinal Cube #0 (itsdonny x Johannes, rat sat)"
+  "name": "Ordinal Cube #0"
 }
 ```
 
