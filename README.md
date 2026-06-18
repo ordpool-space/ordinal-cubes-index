@@ -63,7 +63,7 @@ Each `BATCH_COMMIT` (default 10000) inscriptions, progress is committed to `cube
 
 **Phase C — Steady state** (`.github/workflows/grind.yml`)
 
-Hourly cron runs `scripts/grind.mjs` with the default 5000-iteration budget. Picks up wherever the cursor left off. If anything changed, commits and pushes. Idempotent — re-running with no new inscriptions is a no-op.
+Continuous cron runs `scripts/grind.mjs` with the default 5000-iteration budget. Picks up wherever the cursor left off. If anything changed, commits and pushes. Idempotent — re-running with no new inscriptions is a no-op.
 
 ## Running locally
 
@@ -88,13 +88,6 @@ const cubes = await fetch(
 ).then(r => r.json());
 ```
 
-GitHub Pages serves with `Access-Control-Allow-Origin: *` and gzip transparently — no CORS or decompression dance needed in the browser.
-
-## Cross-references
-
-- The cube renderer inscriptions (referenced by every cube) are pinned in `scripts/parse-cube.mjs`. There are three versions; they're permanent on-chain inscriptions and don't change.
-- One cube (`615c70a…2f33i0` "Bitcoin Wizards") has a Cloudflare beacon `<script defer>` inscribed inside its on-chain bytes — the upload service that minted it ran behind Cloudflare with beacon injection enabled. The parser strips it before the regex match. Confirmed identical on both `ord.ordpool.space` and `ordinals.com`.
-
 ## License
 
-MIT — see [LICENSE](./LICENSE) once it exists. Underlying inscription data is on-chain Bitcoin; no rights are claimed over it.
+CC0 1.0 Universal — see [LICENSE](./LICENSE). Underlying inscription data is on-chain Bitcoin; no rights are claimed over it.
