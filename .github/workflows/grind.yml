@@ -2,8 +2,8 @@ name: Grind for cubes
 
 on:
   schedule:
-    # Every 10 min, offset off the :00 / :10 / :20 global spikes.
-    - cron: "3,13,23,33,43,53 * * * *"
+    # Every 10 min, ending in 2 (because 42).
+    - cron: "2,12,22,32,42,52 * * * *"
   workflow_dispatch:
     inputs:
       max_iterations:
