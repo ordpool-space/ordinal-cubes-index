@@ -15,6 +15,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getInscription, getContent, getStatus } from './ord.mjs';
 import { parseCube } from './parse-cube.mjs';
+import { applyPositionalNames } from './sort.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.resolve(__dirname, '..', 'data');
@@ -43,12 +44,6 @@ function looksLikeCubeShape(meta) {
   return typeof len === 'number' && len >= MIN_LEN && len <= MAX_LEN;
 }
 
-function applyPositionalName(cube, index) {
-  let name = `Ordinal Cube #${index}`;
-  const titleTrait = cube.attributes.find((t) => t.trait_type === 'Title');
-  if (titleTrait) name = `${name} (${titleTrait.value})`;
-  return { ...cube, name };
-}
 
 async function main() {
   const startedAt = Date.now();
@@ -120,13 +115,11 @@ async function main() {
     }
   }
 
-  // Merge & re-rank
+  // Merge & re-rank — applyPositionalNames sorts by (blockHeight, number)
+  // and reassigns "Ordinal Cube #N" labels from the sorted position.
   if (foundThisRun.length > 0) {
     cubes.push(...foundThisRun);
-    cubes.sort((a, b) => a.inscriptionNumber - b.inscriptionNumber);
-    // Strip any previous `name` field before re-numbering — keeps shape clean.
-    for (const c of cubes) delete c.name;
-    const renamed = cubes.map(applyPositionalName);
+    const renamed = applyPositionalNames(cubes);
     await writeFile(CUBES_PATH, JSON.stringify(renamed, null, 2) + '\n');
   }
 

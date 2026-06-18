@@ -6,10 +6,6 @@ A GitHub Action walks our own ord instance (`ord.ordpool.space`) forward via the
 
 **https://ordpool-space.github.io/ordinal-cubes-index/data/cubes.json**
 
-## Why this exists
-
-The previous discovery path was OrdinalsBot's `/search` endpoint. It broke in mid-2026 (their indexer's internal DNS stopped resolving) and the service looks abandoned. Rather than swap one vendor for another, the index now runs on a public Action against infrastructure we own. No API keys, no external SaaS, no surprises.
-
 ## Data shape
 
 `data/cubes.json` is an array sorted by inscription number ascending. Cube 0 is the genesis cube (a cursed inscription at number −265038).

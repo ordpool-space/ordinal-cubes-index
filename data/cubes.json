@@ -1,47 +1,5 @@
 [
   {
-    "inscriptionId": "72cb9bcb673652e9bf41d562920371e27dcfa39904cb7e96c45faad70b07f0e2i0",
-    "inscriptionNumber": -265038,
-    "blockHeight": 814583,
-    "timestamp": 1698704842,
-    "contentLength": 613,
-    "attributes": [
-      {
-        "trait_type": "Side 1",
-        "value": "331cd9060fba928f95459fc3e59985969dd15ba591f887042091f3304cd4ce55i0"
-      },
-      {
-        "trait_type": "Side 2",
-        "value": "bbca6209fe5ca12b6a3b4841d2111b331a38e9b3452675db9a99e696a8854f4di0"
-      },
-      {
-        "trait_type": "Side 3",
-        "value": "bde9434bd4505ca50e52c5664dc616e4845309eaee3c637fd903ed81d8996092i0"
-      },
-      {
-        "trait_type": "Side 4",
-        "value": "e7b227a44650cb694206aa76781bba8d9d6e44c0382f4592669085f9326ae163i0"
-      },
-      {
-        "trait_type": "Side 5",
-        "value": "2bfb6af9068ee7a89cce9c72392bfed6f78a0edd59c1c4e5c401c4294c24eb26i0"
-      },
-      {
-        "trait_type": "Side 6",
-        "value": "8ff1ca9446dfc7b7eac258eb0bac7edc55c94376b3f748c0e8de01e29e553c89i0"
-      },
-      {
-        "trait_type": "Version",
-        "value": "v3"
-      },
-      {
-        "trait_type": "Title",
-        "value": "itsdonny x Johannes, rat sat"
-      }
-    ],
-    "name": "Ordinal Cube #0 (itsdonny x Johannes, rat sat)"
-  },
-  {
     "inscriptionId": "f1997166547da9784a3e7419d2b248551565211811d4f5e705b685efa244451fi0",
     "inscriptionNumber": 13271890,
     "blockHeight": 795579,
@@ -77,7 +35,7 @@
         "value": "v1"
       }
     ],
-    "name": "Ordinal Cube #1"
+    "name": "Ordinal Cube #0"
   },
   {
     "inscriptionId": "fc24e9b9207e00d747968ca80a940296cb6ab3709b73beabaa046e0cbc0b9108i0",
@@ -115,7 +73,7 @@
         "value": "v1"
       }
     ],
-    "name": "Ordinal Cube #2"
+    "name": "Ordinal Cube #1"
   },
   {
     "inscriptionId": "38d418b7dfa596cbe1e6542b0df64f9d4fdcd9075baf674b4dcd6f0c17546409i0",
@@ -153,7 +111,7 @@
         "value": "v1"
       }
     ],
-    "name": "Ordinal Cube #3"
+    "name": "Ordinal Cube #2"
   },
   {
     "inscriptionId": "e5e1ef65f3f3edabeb2e292aa60581f737786b7dc7c78ed4b4e501aaa6ccbe3bi0",
@@ -191,7 +149,7 @@
         "value": "v2"
       }
     ],
-    "name": "Ordinal Cube #4"
+    "name": "Ordinal Cube #3"
   },
   {
     "inscriptionId": "bd76702309dfad128505d1a8ad99a827100c7da44ba96a8933eef5bae91615b9i0",
@@ -229,7 +187,7 @@
         "value": "v2"
       }
     ],
-    "name": "Ordinal Cube #5"
+    "name": "Ordinal Cube #4"
   },
   {
     "inscriptionId": "d7f7eed77f6601c05275cbaa2b448c42fe8277852c6b66a46fb370b20fbc3cf6i0",
@@ -267,7 +225,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #6"
+    "name": "Ordinal Cube #5"
   },
   {
     "inscriptionId": "9e15370f5b0d7f6d9f060003e08ce7f74ae59ecb02124410dc183cc0c818b623i0",
@@ -305,7 +263,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #7"
+    "name": "Ordinal Cube #6"
   },
   {
     "inscriptionId": "befbaecc5a5bd70dc41222da1c6203be41e03c5f6abefdb61ba12b7047296db9i0",
@@ -343,7 +301,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #8"
+    "name": "Ordinal Cube #7"
   },
   {
     "inscriptionId": "f6184b8d67b47060e4d702c2da2422ad354cefe79f3ef37939e3ef5666f8b998i0",
@@ -381,7 +339,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #9"
+    "name": "Ordinal Cube #8"
   },
   {
     "inscriptionId": "eaf5b63cd2de3087d72832206f31d2c47d61fc13b645e25738abcb8bbacb13ebi0",
@@ -419,7 +377,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #10"
+    "name": "Ordinal Cube #9"
   },
   {
     "inscriptionId": "d5ff561552476febbd67579e46eb0ac6a41f8523ba7e9a1c784529c749df619fi0",
@@ -457,7 +415,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #11"
+    "name": "Ordinal Cube #10"
   },
   {
     "inscriptionId": "1349aaef2da2ac7052f93986d59eede7b2b9cc06f2d781d2bd365d107f0620eci0",
@@ -495,7 +453,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #12"
+    "name": "Ordinal Cube #11"
   },
   {
     "inscriptionId": "58c4e6cc6a0dadb84b24d00f76739d2e76b3948fedb8f856337d6db41fa5ba6ci0",
@@ -533,7 +491,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #13"
+    "name": "Ordinal Cube #12"
   },
   {
     "inscriptionId": "c34531886b53ff0d4a2ce85dba204b945e8d00ebdf4971156144c85b837bbf39i0",
@@ -571,7 +529,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #14"
+    "name": "Ordinal Cube #13"
   },
   {
     "inscriptionId": "cb0823a6533602f240396867fbc203db6ead1e6e5ae73c0013b28d86df178cdci0",
@@ -609,7 +567,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #15"
+    "name": "Ordinal Cube #14"
   },
   {
     "inscriptionId": "0e088261e8d3f78c4d500d2a5d760891f7361c9828ab7f0820f36ad611a0c97ai0",
@@ -647,7 +605,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #16"
+    "name": "Ordinal Cube #15"
   },
   {
     "inscriptionId": "a66d23efb15a048787d3dbb701cfe1a4f101b4a5e3cc0d9de65998b97e9e685di0",
@@ -685,7 +643,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #17"
+    "name": "Ordinal Cube #16"
   },
   {
     "inscriptionId": "7fd50309e6e8ef93237379a813947291f90d7448ab424cfa3ba606e5eee7336ci0",
@@ -723,7 +681,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #18"
+    "name": "Ordinal Cube #17"
   },
   {
     "inscriptionId": "9a2c82416ec75c8dc77dcfd8469873d4333b78659f81b65262584872a3ecc984i0",
@@ -761,7 +719,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #19"
+    "name": "Ordinal Cube #18"
   },
   {
     "inscriptionId": "00ef588330b57ba4586365c9a3663e14bcc14452819ae6c09f99eec291435831i0",
@@ -799,7 +757,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #20"
+    "name": "Ordinal Cube #19"
   },
   {
     "inscriptionId": "d7e746bcdc97be0fc7ef941d0c8fce293953a58b82da15557f6e02b39ad22c02i0",
@@ -837,7 +795,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #21"
+    "name": "Ordinal Cube #20"
   },
   {
     "inscriptionId": "07d5c9a6ac19479f2cbb679e212976e93fa8b8a9722db84515d073812c55a7f2i0",
@@ -875,7 +833,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #22"
+    "name": "Ordinal Cube #21"
   },
   {
     "inscriptionId": "3af9ce7fcba72d19f1c3fbd6d08ba9cd852a8f16fa2458a052704faf2f8d4cabi0",
@@ -913,7 +871,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #23"
+    "name": "Ordinal Cube #22"
   },
   {
     "inscriptionId": "ba37437ab62262215756f25206128bc495ddcf1d09272fd1ea4cb5073e08c3bei0",
@@ -951,7 +909,7 @@
         "value": "v3"
       }
     ],
-    "name": "Ordinal Cube #24"
+    "name": "Ordinal Cube #23"
   },
   {
     "inscriptionId": "710e809032c1bd35581f2c975136824792bcfab9325548fba8bb756355584107i0",
@@ -993,7 +951,7 @@
         "value": "GM"
       }
     ],
-    "name": "Ordinal Cube #25 (GM)"
+    "name": "Ordinal Cube #24 (GM)"
   },
   {
     "inscriptionId": "3e64a1a08a04f80a9fa9bad6e469df6886b6a77c07d5869c83978bb82753adb1i0",
@@ -1035,7 +993,7 @@
         "value": "Ordinal Shards"
       }
     ],
-    "name": "Ordinal Cube #26 (Ordinal Shards)"
+    "name": "Ordinal Cube #25 (Ordinal Shards)"
   },
   {
     "inscriptionId": "86497740430199bd98b5007ba2872b4c2bfe2a24351b5ac30b385457e3431053i0",
@@ -1077,7 +1035,7 @@
         "value": "Sylvo x Johannes, September 12"
       }
     ],
-    "name": "Ordinal Cube #27 (Sylvo x Johannes, September 12)"
+    "name": "Ordinal Cube #26 (Sylvo x Johannes, September 12)"
   },
   {
     "inscriptionId": "78fa9d6e9b2b49fbb9f4838e1792dba7c1ec836f22e3206561e2d52759708251i0",
@@ -1119,7 +1077,7 @@
         "value": "Johannes x Sylvo, September 12"
       }
     ],
-    "name": "Ordinal Cube #28 (Johannes x Sylvo, September 12)"
+    "name": "Ordinal Cube #27 (Johannes x Sylvo, September 12)"
   },
   {
     "inscriptionId": "54e5584dd0ddbb663c682232b64c37dd83b6e8ffa8bf43ba155521da90cc43a4i0",
@@ -1161,7 +1119,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #29 (Cypherglyphs)"
+    "name": "Ordinal Cube #28 (Cypherglyphs)"
   },
   {
     "inscriptionId": "3c731c72517a6146ec44aa350457b3b21a97054e0fe64bd4035a362c0d069edfi0",
@@ -1203,7 +1161,7 @@
         "value": "The Artifacts by Lemonhaze"
       }
     ],
-    "name": "Ordinal Cube #30 (The Artifacts by Lemonhaze)"
+    "name": "Ordinal Cube #29 (The Artifacts by Lemonhaze)"
   },
   {
     "inscriptionId": "155accbd46ff3be2e1036c864f9d21319b1abda0a119025f974667423ad2c892i0",
@@ -1245,7 +1203,7 @@
         "value": "Ordinal Shards"
       }
     ],
-    "name": "Ordinal Cube #31 (Ordinal Shards)"
+    "name": "Ordinal Cube #30 (Ordinal Shards)"
   },
   {
     "inscriptionId": "231acddf4297102d8083e2168c3e9ce54aaf3371e5d64669af5c82f5de8e503bi0",
@@ -1287,7 +1245,7 @@
         "value": "SATS"
       }
     ],
-    "name": "Ordinal Cube #32 (SATS)"
+    "name": "Ordinal Cube #31 (SATS)"
   },
   {
     "inscriptionId": "49029fca7936592dc33057ccb5949d8316e918ad632622d6626c84fa1f6df49ei0",
@@ -1329,7 +1287,7 @@
         "value": "Ordinal Shards"
       }
     ],
-    "name": "Ordinal Cube #33 (Ordinal Shards)"
+    "name": "Ordinal Cube #32 (Ordinal Shards)"
   },
   {
     "inscriptionId": "d392b7c1cc34cc8f07da9503cbbc79774747d27c4b0dbb71b5a93cd169cc1483i0",
@@ -1371,7 +1329,7 @@
         "value": "Ordinal Shards"
       }
     ],
-    "name": "Ordinal Cube #34 (Ordinal Shards)"
+    "name": "Ordinal Cube #33 (Ordinal Shards)"
   },
   {
     "inscriptionId": "9ae13f331aac352fca8ef074b9edf879da9ba6de4fcbef3b6437185cef6e0cfai0",
@@ -1413,7 +1371,7 @@
         "value": "BITCOIN ROCKS"
       }
     ],
-    "name": "Ordinal Cube #35 (BITCOIN ROCKS)"
+    "name": "Ordinal Cube #34 (BITCOIN ROCKS)"
   },
   {
     "inscriptionId": "2afa47a21b5519d879c862a16bf92db390e4bc42bc5a5725eba932b2bf189441i0",
@@ -1455,7 +1413,7 @@
         "value": "Ordinal Shards"
       }
     ],
-    "name": "Ordinal Cube #36 (Ordinal Shards)"
+    "name": "Ordinal Cube #35 (Ordinal Shards)"
   },
   {
     "inscriptionId": "b2abc693b5f4871d6167a2e068757e20d6e92b605e2b33d99e1582bccc03a9cci0",
@@ -1497,7 +1455,7 @@
         "value": "BASED PUNKS"
       }
     ],
-    "name": "Ordinal Cube #37 (BASED PUNKS)"
+    "name": "Ordinal Cube #36 (BASED PUNKS)"
   },
   {
     "inscriptionId": "2ef51dc698cf8dacd05a51ea4d07e754f55c96fabf448639a286b2408f586765i0",
@@ -1539,7 +1497,7 @@
         "value": "SpunkArt"
       }
     ],
-    "name": "Ordinal Cube #38 (SpunkArt)"
+    "name": "Ordinal Cube #37 (SpunkArt)"
   },
   {
     "inscriptionId": "8f2dc3b5caec8a836a8c54cfdd33abf1ef3b6717f12248c44d584ec5535ef24ai0",
@@ -1581,7 +1539,7 @@
         "value": "Symmetria Evolvitur"
       }
     ],
-    "name": "Ordinal Cube #39 (Symmetria Evolvitur)"
+    "name": "Ordinal Cube #38 (Symmetria Evolvitur)"
   },
   {
     "inscriptionId": "9ebea3e2b34c0c83837c2e0f7aadf76c89b21d055a3d461735447cd659e24713i0",
@@ -1623,7 +1581,7 @@
         "value": "Skullx: Hell Raiders"
       }
     ],
-    "name": "Ordinal Cube #40 (Skullx: Hell Raiders)"
+    "name": "Ordinal Cube #39 (Skullx: Hell Raiders)"
   },
   {
     "inscriptionId": "edf58584348461b8be0bee7cc11a64d76e88bc7a6b8b46e72008cda7973f7422i0",
@@ -1665,7 +1623,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #41 (Goosinals)"
+    "name": "Ordinal Cube #40 (Goosinals)"
   },
   {
     "inscriptionId": "353b03af083d9ca490596d2a0cff64d2b6895a4bf5b55a63148544889a559207i0",
@@ -1707,7 +1665,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #42 (Goosinals)"
+    "name": "Ordinal Cube #41 (Goosinals)"
   },
   {
     "inscriptionId": "e0103d1962457b294cac3a006e9abb76d44d79146d2562e90fa9ed5805816778i0",
@@ -1749,7 +1707,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #43 (Goosinals)"
+    "name": "Ordinal Cube #42 (Goosinals)"
   },
   {
     "inscriptionId": "f5d9040a2f140eae95d0e633055203600baff9771e511e262c06ec389c958d4bi0",
@@ -1791,7 +1749,7 @@
         "value": "Skullx: Hell Raiders"
       }
     ],
-    "name": "Ordinal Cube #44 (Skullx: Hell Raiders)"
+    "name": "Ordinal Cube #43 (Skullx: Hell Raiders)"
   },
   {
     "inscriptionId": "8b5bf85341ec9cfa9ef854b6f7ebf4ece8c11ff72f5044f0c7da9834ed9f798bi0",
@@ -1833,7 +1791,7 @@
         "value": "Symmetria Evolvitur"
       }
     ],
-    "name": "Ordinal Cube #45 (Symmetria Evolvitur)"
+    "name": "Ordinal Cube #44 (Symmetria Evolvitur)"
   },
   {
     "inscriptionId": "751007cf3090703f241894af5c057fc8850d650a577a800447d4f21f5d2cecdei0",
@@ -1875,7 +1833,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #46 (Goosinals)"
+    "name": "Ordinal Cube #45 (Goosinals)"
   },
   {
     "inscriptionId": "00b1457a8ca5cf44712e9e91e37fd2237c150f077f836ebe724bd49ec9963c8fi0",
@@ -1917,7 +1875,7 @@
         "value": "Lil Peepos"
       }
     ],
-    "name": "Ordinal Cube #47 (Lil Peepos)"
+    "name": "Ordinal Cube #46 (Lil Peepos)"
   },
   {
     "inscriptionId": "2066e3b2cfe916c2e0e867cb0ed8775030f6431cb849955c789d5cc81f9afde8i0",
@@ -1959,7 +1917,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #48 (Cypherglyphs)"
+    "name": "Ordinal Cube #47 (Cypherglyphs)"
   },
   {
     "inscriptionId": "a6476f5f05fcb1def991fb363c1f1cad2d0e5fc8d3b89cfe5b2ad32c3deb979bi0",
@@ -2001,7 +1959,7 @@
         "value": "ordinals NPCs"
       }
     ],
-    "name": "Ordinal Cube #49 (ordinals NPCs)"
+    "name": "Ordinal Cube #48 (ordinals NPCs)"
   },
   {
     "inscriptionId": "218a134e38cad471b0be5c1f0ee5c7c7853cb12b7aae69e5e767c8dc9c82a68ai0",
@@ -2043,7 +2001,7 @@
         "value": "CoolGirl Ordinals"
       }
     ],
-    "name": "Ordinal Cube #50 (CoolGirl Ordinals)"
+    "name": "Ordinal Cube #49 (CoolGirl Ordinals)"
   },
   {
     "inscriptionId": "ac882009b473cbe9795dbaff4b15df1a47652ec87686bc702bb3e3382482a69di0",
@@ -2085,7 +2043,7 @@
         "value": "Bitcoin Digits"
       }
     ],
-    "name": "Ordinal Cube #51 (Bitcoin Digits)"
+    "name": "Ordinal Cube #50 (Bitcoin Digits)"
   },
   {
     "inscriptionId": "562df26d50459dac5daf3957b89653ab439b0bca9805bba5c0703a949107f6e5i0",
@@ -2127,7 +2085,7 @@
         "value": "Bitcoin Digits"
       }
     ],
-    "name": "Ordinal Cube #52 (Bitcoin Digits)"
+    "name": "Ordinal Cube #51 (Bitcoin Digits)"
   },
   {
     "inscriptionId": "9abde7d2462b418b2ba7f48c6e823779827c9a4cf32aed66e908a481d37892eai0",
@@ -2169,7 +2127,7 @@
         "value": "bitmap"
       }
     ],
-    "name": "Ordinal Cube #53 (bitmap)"
+    "name": "Ordinal Cube #52 (bitmap)"
   },
   {
     "inscriptionId": "955025e5a4c2686af706f42c61ce567233f5aa3f3abcb0c3234b1e30435f0191i0",
@@ -2211,7 +2169,7 @@
         "value": "DogePunks"
       }
     ],
-    "name": "Ordinal Cube #54 (DogePunks)"
+    "name": "Ordinal Cube #53 (DogePunks)"
   },
   {
     "inscriptionId": "64693b14b45246364314b6b25c9a2f40052fc4195993d7b9c22d96c9c62d529fi0",
@@ -2253,7 +2211,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #55 (Goosinals)"
+    "name": "Ordinal Cube #54 (Goosinals)"
   },
   {
     "inscriptionId": "30a6f3d7ef6ba65143cf550abdf2f2567a09315723ab5122749a4e97055bcd6fi0",
@@ -2295,7 +2253,7 @@
         "value": "Bitcoin Digits"
       }
     ],
-    "name": "Ordinal Cube #56 (Bitcoin Digits)"
+    "name": "Ordinal Cube #55 (Bitcoin Digits)"
   },
   {
     "inscriptionId": "6fb1a6ad28ca1a0bfa86ef23bf5c8ab6dd41e2f8a7973b4af5b65b280692c437i0",
@@ -2337,7 +2295,7 @@
         "value": ".crypto"
       }
     ],
-    "name": "Ordinal Cube #57 (.crypto)"
+    "name": "Ordinal Cube #56 (.crypto)"
   },
   {
     "inscriptionId": "00f75e6b6ac6d6ac88e5c70c6abb4a6eef69695792a1a9d5f46190b69886aac9i0",
@@ -2379,7 +2337,7 @@
         "value": "Oracles"
       }
     ],
-    "name": "Ordinal Cube #58 (Oracles)"
+    "name": "Ordinal Cube #57 (Oracles)"
   },
   {
     "inscriptionId": "5b8958fab7ccaa8add47e58e8023e9382f49a49f5a40cd45fe2d32028019a950i0",
@@ -2421,7 +2379,7 @@
         "value": "The Ordinal War"
       }
     ],
-    "name": "Ordinal Cube #59 (The Ordinal War)"
+    "name": "Ordinal Cube #58 (The Ordinal War)"
   },
   {
     "inscriptionId": "732d427d3a859aded50ef08e250a816f45eb93c822368fe1c5e4314f5ea125e7i0",
@@ -2463,7 +2421,7 @@
         "value": "420 Rabbits"
       }
     ],
-    "name": "Ordinal Cube #60 (420 Rabbits)"
+    "name": "Ordinal Cube #59 (420 Rabbits)"
   },
   {
     "inscriptionId": "7b80e7fb23d2c499d9cf714781039889c9a2c70a2afb5fcd6f3adaadcb57c00ei0",
@@ -2505,7 +2463,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #61 (Goosinals)"
+    "name": "Ordinal Cube #60 (Goosinals)"
   },
   {
     "inscriptionId": "a6a8c8620153f003a0d6d52bc39a1306bd80040e3f06d10e80e7686300cb12cci0",
@@ -2547,7 +2505,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #62 (Goosinals)"
+    "name": "Ordinal Cube #61 (Goosinals)"
   },
   {
     "inscriptionId": "7ad6eca2c09703a20cd64957245fa529c74d07d0773d75ff884b12493fcadf12i0",
@@ -2589,7 +2547,7 @@
         "value": "KEK Maxi Biz (KMB)"
       }
     ],
-    "name": "Ordinal Cube #63 (KEK Maxi Biz (KMB))"
+    "name": "Ordinal Cube #62 (KEK Maxi Biz (KMB))"
   },
   {
     "inscriptionId": "06d6d78832f0c93d46d0f0ddf93e2e9e0f42cd649d525a143a9ba80b35a17e47i0",
@@ -2631,7 +2589,7 @@
         "value": "Pingoos"
       }
     ],
-    "name": "Ordinal Cube #64 (Pingoos)"
+    "name": "Ordinal Cube #63 (Pingoos)"
   },
   {
     "inscriptionId": "0eea023c9e43401abef436649b5af77791053c31d202210998b617ab083bcfb1i0",
@@ -2673,7 +2631,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #65 (Cypherglyphs)"
+    "name": "Ordinal Cube #64 (Cypherglyphs)"
   },
   {
     "inscriptionId": "eebf483bb84208a6d7e16dc9c0cacaa22ff8a818d9ff6949793c1b8fc8f1db2fi0",
@@ -2715,7 +2673,7 @@
         "value": "Misprints"
       }
     ],
-    "name": "Ordinal Cube #66 (Misprints)"
+    "name": "Ordinal Cube #65 (Misprints)"
   },
   {
     "inscriptionId": "76a141add413e9b04a27a5a664a092c5ea76c2f9f90ece0d6aebb30bfd0c56e9i0",
@@ -2757,7 +2715,7 @@
         "value": "Ordillas"
       }
     ],
-    "name": "Ordinal Cube #67 (Ordillas)"
+    "name": "Ordinal Cube #66 (Ordillas)"
   },
   {
     "inscriptionId": "a7d69c525eb9bc986b7b2819d7233c13a01ecb944e0ed89c857713eb1ef48ab7i0",
@@ -2799,7 +2757,7 @@
         "value": "Bitcoin Digits"
       }
     ],
-    "name": "Ordinal Cube #68 (Bitcoin Digits)"
+    "name": "Ordinal Cube #67 (Bitcoin Digits)"
   },
   {
     "inscriptionId": "64740b6da4e812d20509c633255302cb164ebee24dc63727a18d847c501571e8i0",
@@ -2841,7 +2799,7 @@
         "value": "O.P.I.U.M."
       }
     ],
-    "name": "Ordinal Cube #69 (O.P.I.U.M.)"
+    "name": "Ordinal Cube #68 (O.P.I.U.M.)"
   },
   {
     "inscriptionId": "1f31d1049614b683c4cccba0875c16c2518a6e3b13647082246bbddc710e149ci0",
@@ -2883,7 +2841,7 @@
         "value": "Uncommon Doges"
       }
     ],
-    "name": "Ordinal Cube #70 (Uncommon Doges)"
+    "name": "Ordinal Cube #69 (Uncommon Doges)"
   },
   {
     "inscriptionId": "f5885e0b45de190213e59fe8d543c09a44cc1accb97a6237fe20f35ac1966967i0",
@@ -2925,7 +2883,7 @@
         "value": "HUG"
       }
     ],
-    "name": "Ordinal Cube #71 (HUG)"
+    "name": "Ordinal Cube #70 (HUG)"
   },
   {
     "inscriptionId": "d2c93dd3965c4869ffc68167fb9ac30f3f92c097c1a773e6675cc38f27ba2afei0",
@@ -2967,7 +2925,7 @@
         "value": "Impressionist Visions"
       }
     ],
-    "name": "Ordinal Cube #72 (Impressionist Visions)"
+    "name": "Ordinal Cube #71 (Impressionist Visions)"
   },
   {
     "inscriptionId": "222217b109cce896d214e40d7f266b89d034d6e622225ab853c122df757d2408i0",
@@ -3009,7 +2967,7 @@
         "value": "NeoPunks"
       }
     ],
-    "name": "Ordinal Cube #73 (NeoPunks)"
+    "name": "Ordinal Cube #72 (NeoPunks)"
   },
   {
     "inscriptionId": "987193c29e04917f2a9adb0839a0b4e900619d67d566c144b29c9aa5df8f0748i0",
@@ -3051,7 +3009,7 @@
         "value": "Ordillas"
       }
     ],
-    "name": "Ordinal Cube #74 (Ordillas)"
+    "name": "Ordinal Cube #73 (Ordillas)"
   },
   {
     "inscriptionId": "f0435e174183d12c650db0234523737160fa6548a60c6e8ef14447736c41d856i0",
@@ -3093,7 +3051,7 @@
         "value": "Rare 78"
       }
     ],
-    "name": "Ordinal Cube #75 (Rare 78)"
+    "name": "Ordinal Cube #74 (Rare 78)"
   },
   {
     "inscriptionId": "c0215b0d08e7edf715b780c9e321ab21cb92d7e67e08765831b1da271c2976c7i0",
@@ -3135,7 +3093,7 @@
         "value": "Bitcoin Bandits"
       }
     ],
-    "name": "Ordinal Cube #76 (Bitcoin Bandits)"
+    "name": "Ordinal Cube #75 (Bitcoin Bandits)"
   },
   {
     "inscriptionId": "211c94eba407687d0fd4f75f94ee86f1b6f8f61456c1394c47db36ba3682b80ei0",
@@ -3177,7 +3135,7 @@
         "value": "Ordinal Maxi Biz (OMB)"
       }
     ],
-    "name": "Ordinal Cube #77 (Ordinal Maxi Biz (OMB))"
+    "name": "Ordinal Cube #76 (Ordinal Maxi Biz (OMB))"
   },
   {
     "inscriptionId": "7682648ea44faf2164b18c497f75ac2809efb42702ad6888c532265e1db5af9bi0",
@@ -3219,7 +3177,7 @@
         "value": "Piggies World"
       }
     ],
-    "name": "Ordinal Cube #78 (Piggies World)"
+    "name": "Ordinal Cube #77 (Piggies World)"
   },
   {
     "inscriptionId": "a3c82316891b77492cf22268413af955dc0ad0e6e62f2a7ab463825dbef027d9i0",
@@ -3261,7 +3219,7 @@
         "value": "Ordinal Geese"
       }
     ],
-    "name": "Ordinal Cube #79 (Ordinal Geese)"
+    "name": "Ordinal Cube #78 (Ordinal Geese)"
   },
   {
     "inscriptionId": "b93f6158e7c7e7d2592aee0118c2d9dc19c40af71ed5e59e6bd75f29cd1d788bi0",
@@ -3303,7 +3261,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #80 (Cypherglyphs)"
+    "name": "Ordinal Cube #79 (Cypherglyphs)"
   },
   {
     "inscriptionId": "d462e68d1789556d6298c9249b147743be7e27b1eedbaaa2a6e9378dd595f5abi0",
@@ -3345,7 +3303,7 @@
         "value": "Ordinal Worlds"
       }
     ],
-    "name": "Ordinal Cube #81 (Ordinal Worlds)"
+    "name": "Ordinal Cube #80 (Ordinal Worlds)"
   },
   {
     "inscriptionId": "2392ea5355025413e94cf1efae54c29b2b6099119f1835a93c17054295075ebdi0",
@@ -3387,7 +3345,7 @@
         "value": "ABC"
       }
     ],
-    "name": "Ordinal Cube #82 (ABC)"
+    "name": "Ordinal Cube #81 (ABC)"
   },
   {
     "inscriptionId": "e383e1ab8021ef7eb3ce2053386b16132892b0e94f5f405ef20dee4df34cd359i0",
@@ -3429,7 +3387,7 @@
         "value": "Bitcoin Frogs"
       }
     ],
-    "name": "Ordinal Cube #83 (Bitcoin Frogs)"
+    "name": "Ordinal Cube #82 (Bitcoin Frogs)"
   },
   {
     "inscriptionId": "ad0780e1f83574a4470bda2c0965c2e05843d65eea10df1809c2807a3e3bd57ei0",
@@ -3471,7 +3429,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #84 (Cypherglyphs)"
+    "name": "Ordinal Cube #83 (Cypherglyphs)"
   },
   {
     "inscriptionId": "d2091c6fc2abc562ab1dff6d461c50e2eae3cb7b50a2f8e545c407c0bad2f285i0",
@@ -3513,7 +3471,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #85 (Cypherglyphs)"
+    "name": "Ordinal Cube #84 (Cypherglyphs)"
   },
   {
     "inscriptionId": "ba8601a5180318ff09f6b53d9b696fd752ee7ca40d0cc5594bd04d2283bf1422i0",
@@ -3555,7 +3513,7 @@
         "value": "Bitcoin Frogs"
       }
     ],
-    "name": "Ordinal Cube #86 (Bitcoin Frogs)"
+    "name": "Ordinal Cube #85 (Bitcoin Frogs)"
   },
   {
     "inscriptionId": "ee27eaab7f0bbc9b3602af8ff0794e005d97764bc66b597662ed7a77058d1b0fi0",
@@ -3597,7 +3555,7 @@
         "value": "Astral Babes"
       }
     ],
-    "name": "Ordinal Cube #87 (Astral Babes)"
+    "name": "Ordinal Cube #86 (Astral Babes)"
   },
   {
     "inscriptionId": "98ca02f876cffcbc128c9f413535072cccf65836386538241a82f626b58cf9d1i0",
@@ -3639,7 +3597,7 @@
         "value": "Ordinal Worlds"
       }
     ],
-    "name": "Ordinal Cube #88 (Ordinal Worlds)"
+    "name": "Ordinal Cube #87 (Ordinal Worlds)"
   },
   {
     "inscriptionId": "28213333d3fbffef04ab1a85f1bc37e22447d4d2d0e1228ae69d530855fb3e1ai0",
@@ -3681,7 +3639,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #89 (Cypherglyphs)"
+    "name": "Ordinal Cube #88 (Cypherglyphs)"
   },
   {
     "inscriptionId": "97452984025834f84abb1590e8e61f3c335051f9635510784f14b9ec9d8d60adi0",
@@ -3723,7 +3681,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #90 (Cypherglyphs)"
+    "name": "Ordinal Cube #89 (Cypherglyphs)"
   },
   {
     "inscriptionId": "678e5145ca75212f0f7c91a2c49e07b0cf86bf2b301da2934d489b9cbfc9c22bi0",
@@ -3765,7 +3723,7 @@
         "value": "Clay Collective"
       }
     ],
-    "name": "Ordinal Cube #91 (Clay Collective)"
+    "name": "Ordinal Cube #90 (Clay Collective)"
   },
   {
     "inscriptionId": "5e783704b525e02c6903aa79dee3587f94f4b550f1ea982339da8ca7bfd7c99ai0",
@@ -3807,7 +3765,7 @@
         "value": "Sub 0,1,2,3,4,5"
       }
     ],
-    "name": "Ordinal Cube #92 (Sub 0,1,2,3,4,5)"
+    "name": "Ordinal Cube #91 (Sub 0,1,2,3,4,5)"
   },
   {
     "inscriptionId": "9d0c4974f3c678471b8950ff7b7fb8abcda429c2b77142927a713f4bdc8f5af0i0",
@@ -3849,7 +3807,7 @@
         "value": "ApRunner"
       }
     ],
-    "name": "Ordinal Cube #93 (ApRunner)"
+    "name": "Ordinal Cube #92 (ApRunner)"
   },
   {
     "inscriptionId": "6f2b56473b215164bd56c010b0a8ae0bf568e9ba689c55b42c372213f530a725i0",
@@ -3891,7 +3849,7 @@
         "value": "OMB"
       }
     ],
-    "name": "Ordinal Cube #94 (OMB)"
+    "name": "Ordinal Cube #93 (OMB)"
   },
   {
     "inscriptionId": "0adb0b0e7a868b04365f1e79dbe31f6d65c617d084b294f4df788ebac21067d6i0",
@@ -3933,7 +3891,7 @@
         "value": "Dragon Healer"
       }
     ],
-    "name": "Ordinal Cube #95 (Dragon Healer)"
+    "name": "Ordinal Cube #94 (Dragon Healer)"
   },
   {
     "inscriptionId": "9fcd9c05594889c5ed0f47c39e67c96458f47b13029baab5b87b40df2b958abbi0",
@@ -3975,7 +3933,7 @@
         "value": "Bitcoin Wizards"
       }
     ],
-    "name": "Ordinal Cube #96 (Bitcoin Wizards)"
+    "name": "Ordinal Cube #95 (Bitcoin Wizards)"
   },
   {
     "inscriptionId": "500cb18c678dcf7386b9daf004a6eea04e02056b9d436702c42ea48a9f3b2b8bi0",
@@ -4017,7 +3975,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #97 (Cypherglyphs)"
+    "name": "Ordinal Cube #96 (Cypherglyphs)"
   },
   {
     "inscriptionId": "931a850e61a1b95f780c5b081268826ea09e1efc2548785aa0290c824d570051i0",
@@ -4059,7 +4017,7 @@
         "value": "OMB Cube"
       }
     ],
-    "name": "Ordinal Cube #98 (OMB Cube)"
+    "name": "Ordinal Cube #97 (OMB Cube)"
   },
   {
     "inscriptionId": "fdf5b9c78e7e97f23220be70227a11627670daf534e8b96d6c2d8f88f2a509d9i0",
@@ -4101,7 +4059,7 @@
         "value": "Cypherglyphs"
       }
     ],
-    "name": "Ordinal Cube #99 (Cypherglyphs)"
+    "name": "Ordinal Cube #98 (Cypherglyphs)"
   },
   {
     "inscriptionId": "93d343b897a0161b1a1ef83ea67ca1cf36e5e0c82734c463b21d9d361273c8a6i0",
@@ -4143,7 +4101,7 @@
         "value": "BOB"
       }
     ],
-    "name": "Ordinal Cube #100 (BOB)"
+    "name": "Ordinal Cube #99 (BOB)"
   },
   {
     "inscriptionId": "63e1474dd52f3ee964b1e09c363259c03efde39403b783991881845a24c38314i0",
@@ -4185,7 +4143,7 @@
         "value": "DogePunks"
       }
     ],
-    "name": "Ordinal Cube #101 (DogePunks)"
+    "name": "Ordinal Cube #100 (DogePunks)"
   },
   {
     "inscriptionId": "7e5abc7019dfde46a72418da114fddc7ca02c9e4e890723a0039052ee5d9cf5ci0",
@@ -4227,7 +4185,7 @@
         "value": "Goosinals"
       }
     ],
-    "name": "Ordinal Cube #102 (Goosinals)"
+    "name": "Ordinal Cube #101 (Goosinals)"
   },
   {
     "inscriptionId": "ec0cc20cb3acd89878a012242d741136f3c0d0eece1487cf52ff452dd30374a6i0",
@@ -4269,7 +4227,7 @@
         "value": "Bitcoin Bandits"
       }
     ],
-    "name": "Ordinal Cube #103 (Bitcoin Bandits)"
+    "name": "Ordinal Cube #102 (Bitcoin Bandits)"
   },
   {
     "inscriptionId": "fecde80c198b39384797622532fa78265ad422651f7047de05eceba34b9ae0cdi0",
@@ -4311,7 +4269,7 @@
         "value": "Ordinal Fomojis"
       }
     ],
-    "name": "Ordinal Cube #104 (Ordinal Fomojis)"
+    "name": "Ordinal Cube #103 (Ordinal Fomojis)"
   },
   {
     "inscriptionId": "1c6c73caf63db93355db43ffb7b51ae46121d12faa6023e0c45b832a6ca75273i0",
@@ -4353,7 +4311,7 @@
         "value": "Block 9 Pixelated OMB"
       }
     ],
-    "name": "Ordinal Cube #105 (Block 9 Pixelated OMB)"
+    "name": "Ordinal Cube #104 (Block 9 Pixelated OMB)"
   },
   {
     "inscriptionId": "429838f7cf21825bf83afd51a1caeedcbac066dc64f87616a7af0c81ae03b95ei0",
@@ -4395,7 +4353,7 @@
         "value": "NeoPunks"
       }
     ],
-    "name": "Ordinal Cube #106 (NeoPunks)"
+    "name": "Ordinal Cube #105 (NeoPunks)"
   },
   {
     "inscriptionId": "0431066b61d9ec11417fc26cee1dccf55c97dc4bd3ce712847ac70f1f8e30976i0",
@@ -4437,7 +4395,7 @@
         "value": "BTC DeGods"
       }
     ],
-    "name": "Ordinal Cube #107 (BTC DeGods)"
+    "name": "Ordinal Cube #106 (BTC DeGods)"
   },
   {
     "inscriptionId": "0c19f0384e1cea7255296eaab6f7d2e263d0b46d608be8b278d38518a1f03190i0",
@@ -4479,7 +4437,7 @@
         "value": "Genesis N9nes"
       }
     ],
-    "name": "Ordinal Cube #108 (Genesis N9nes)"
+    "name": "Ordinal Cube #107 (Genesis N9nes)"
   },
   {
     "inscriptionId": "2b052a1a0fabf4d434d4c58123d3bdab6a62d77223f36849d6080a3a14729492i0",
@@ -4521,7 +4479,7 @@
         "value": "Symmetria Evolvitur"
       }
     ],
-    "name": "Ordinal Cube #109 (Symmetria Evolvitur)"
+    "name": "Ordinal Cube #108 (Symmetria Evolvitur)"
   },
   {
     "inscriptionId": "3963ea12823ccc15e5f01831be30f1e6eb7b1d123230cd50ea2c77378f9e9a3ei0",
@@ -4563,7 +4521,7 @@
         "value": "Antediluvian - Scorched Tides"
       }
     ],
-    "name": "Ordinal Cube #110 (Antediluvian - Scorched Tides)"
+    "name": "Ordinal Cube #109 (Antediluvian - Scorched Tides)"
   },
   {
     "inscriptionId": "7db327ff5a35010050e13b5f747d6a8964fe556f210fc04da262470a51e012b4i0",
@@ -4605,7 +4563,7 @@
         "value": "Bitcoin Frogs"
       }
     ],
-    "name": "Ordinal Cube #111 (Bitcoin Frogs)"
+    "name": "Ordinal Cube #110 (Bitcoin Frogs)"
   },
   {
     "inscriptionId": "d3666d148c0041ac2488db39e09106199714634e6ccdcb6bb6f0f9fb870c692ai0",
@@ -4647,7 +4605,49 @@
         "value": "Ordinal Apes"
       }
     ],
-    "name": "Ordinal Cube #112 (Ordinal Apes)"
+    "name": "Ordinal Cube #111 (Ordinal Apes)"
+  },
+  {
+    "inscriptionId": "72cb9bcb673652e9bf41d562920371e27dcfa39904cb7e96c45faad70b07f0e2i0",
+    "inscriptionNumber": -265038,
+    "blockHeight": 814583,
+    "timestamp": 1698704842,
+    "contentLength": 613,
+    "attributes": [
+      {
+        "trait_type": "Side 1",
+        "value": "331cd9060fba928f95459fc3e59985969dd15ba591f887042091f3304cd4ce55i0"
+      },
+      {
+        "trait_type": "Side 2",
+        "value": "bbca6209fe5ca12b6a3b4841d2111b331a38e9b3452675db9a99e696a8854f4di0"
+      },
+      {
+        "trait_type": "Side 3",
+        "value": "bde9434bd4505ca50e52c5664dc616e4845309eaee3c637fd903ed81d8996092i0"
+      },
+      {
+        "trait_type": "Side 4",
+        "value": "e7b227a44650cb694206aa76781bba8d9d6e44c0382f4592669085f9326ae163i0"
+      },
+      {
+        "trait_type": "Side 5",
+        "value": "2bfb6af9068ee7a89cce9c72392bfed6f78a0edd59c1c4e5c401c4294c24eb26i0"
+      },
+      {
+        "trait_type": "Side 6",
+        "value": "8ff1ca9446dfc7b7eac258eb0bac7edc55c94376b3f748c0e8de01e29e553c89i0"
+      },
+      {
+        "trait_type": "Version",
+        "value": "v3"
+      },
+      {
+        "trait_type": "Title",
+        "value": "itsdonny x Johannes, rat sat"
+      }
+    ],
+    "name": "Ordinal Cube #112 (itsdonny x Johannes, rat sat)"
   },
   {
     "inscriptionId": "56be4bd643c1d958a58f237bc3b8bcf7c01ac72a22feec80f2f29d928ff6d537i0",

@@ -16,6 +16,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getInscription, getContent, getStatus } from './ord.mjs';
 import { parseCube } from './parse-cube.mjs';
+import { applyPositionalNames } from './sort.mjs';
 
 const ME_ARCHIVE_URL =
   'https://ordpool-space.github.io/magic-eden-ordinals-archive/inscriptions/ordinal-cubes-by-haus-hoppe.csv.gz';
@@ -65,9 +66,6 @@ async function withPool(items, n, fn) {
 }
 
 function buildCube(id, meta, attributes) {
-  const titleTrait = attributes.find((t) => t.trait_type === 'Title');
-  // Position-derived name. The bootstrap returns cubes unsorted; the caller
-  // assigns the final positional name after sorting by inscriptionNumber.
   return {
     inscriptionId: id,
     inscriptionNumber: meta.number,
@@ -75,15 +73,7 @@ function buildCube(id, meta, attributes) {
     timestamp: meta.timestamp,
     contentLength: meta.content_length,
     attributes,
-    _titleTrait: titleTrait?.value ?? null,
   };
-}
-
-function applyPositionalName(cube, index) {
-  let name = `Ordinal Cube #${index}`;
-  if (cube._titleTrait) name = `${name} (${cube._titleTrait})`;
-  const { _titleTrait, ...rest } = cube;
-  return { ...rest, name };
 }
 
 async function main() {
@@ -119,11 +109,10 @@ async function main() {
     cubes.push(buildCube(id, meta, attributes));
   }
 
-  // Sort by inscription number ascending → genesis (the negative one) first
-  cubes.sort((a, b) => a.inscriptionNumber - b.inscriptionNumber);
-
-  // Assign positional names ("Ordinal Cube #N")
-  const finalCubes = cubes.map(applyPositionalName);
+  // Sort by (blockHeight, inscriptionNumber) and assign "Ordinal Cube #N"
+  // labels from the sorted position. This is the canonical numbering — must
+  // match the historical genesis CubeService labels exactly.
+  const finalCubes = applyPositionalNames(cubes);
 
   const tip = (await getStatus()).blessed_inscriptions;
   const latest = finalCubes[finalCubes.length - 1];
