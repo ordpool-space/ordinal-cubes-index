@@ -2,7 +2,8 @@ name: Grind for cubes
 
 on:
   schedule:
-    - cron: "17 * * * *"   # hourly at :17 — avoid the global :00 spike
+    # Every 10 min, offset off the :00 / :10 / :20 global spikes.
+    - cron: "3,13,23,33,43,53 * * * *"
   workflow_dispatch:
     inputs:
       max_iterations:
@@ -13,6 +14,9 @@ on:
 permissions:
   contents: write
 
+# Never overlap. If a previous run is still going, the new scheduled trigger
+# waits for it to finish (cancel-in-progress: false). GitHub queues at most
+# one pending run per group, so a long-running grind can't pile up backlog.
 concurrency:
   group: grind
   cancel-in-progress: false
