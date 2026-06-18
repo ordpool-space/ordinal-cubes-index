@@ -55,9 +55,15 @@ The previous discovery path was OrdinalsBot's `/search` endpoint. It broke in mi
 
 Reads the cube IDs Magic Eden had on file for the `ordinal-cubes-by-haus-hoppe` collection (from our public [magic-eden-ordinals-archive](https://github.com/ordpool-space/magic-eden-ordinals-archive)), fetches each one's metadata + content from `ord.ordpool.space`, runs the cube parser, sorts by inscription number, writes `cubes.json` + `cursor.json` + `validation.json`. ~10 seconds.
 
-**Phase B — Backfill** (`scripts/grind.mjs` with a large `MAX_ITERATIONS`)
+**Phase B — Backfill** (`scripts/backfill.mjs`, optional, run manually on a dev box)
 
-Walks forward from the bootstrap cursor (latest known cube) to the chain tip, looking for cubes the Magic Eden snapshot missed. Run manually on a dev box once.
+Bulk parallel forward scan by inscription number, used to close the multi-million-inscription gap between the bootstrap cursor and the current tip. Safe to use only past the Jubilee fork — pre-Jubilee ranges need linked-list walking via grind.mjs to catch cursed inscriptions.
+
+```bash
+CONCURRENCY=40 node scripts/backfill.mjs   # be polite — start modest
+```
+
+Each `BATCH_COMMIT` (default 10000) inscriptions, progress is committed to `cubes.json` + `cursor.json` so the run is resumable.
 
 **Phase C — Steady state** (`.github/workflows/grind.yml`)
 
