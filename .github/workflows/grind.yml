@@ -2,8 +2,12 @@ name: Grind for cubes
 
 on:
   schedule:
-    # Every 10 min, ending in 2 (because 42).
-    - cron: "2,12,22,32,42,52 * * * *"
+    # Every 10 min, off the hour-boundary (:07 not :00) to reduce
+    # GitHub Actions runner contention. Top-of-the-hour cron triggers
+    # get throttled hardest on shared free runners — actual cadence
+    # was 2–5 hours instead of 10 minutes. :7/:17/etc lands during
+    # low-contention windows; we'll re-measure cadence in a week.
+    - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
     inputs:
       max_iterations:

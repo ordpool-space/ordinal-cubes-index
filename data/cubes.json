@@ -22142,5 +22142,89 @@
       }
     ],
     "name": "Ordinal Cube #529 (EKA POPS)"
+  },
+  {
+    "inscriptionId": "ef2ea1880dcecf01551580e7ba2649fbacf92a1963628d38bc39c83409bae787i0",
+    "inscriptionNumber": 99973635,
+    "blockHeight": 905470,
+    "timestamp": 1752472885,
+    "contentLength": 602,
+    "attributes": [
+      {
+        "trait_type": "Side 1",
+        "value": "22942ac51b03435838ad965fe97efeccb04fa13346f5823d38647cb5908e69c1i0"
+      },
+      {
+        "trait_type": "Side 2",
+        "value": "6efbc05a5f3de9127a7f42a869b0ecd8d1e1a6551b5f71230f29116a30ee4ed3i0"
+      },
+      {
+        "trait_type": "Side 3",
+        "value": "ac38a06104e7eca553c8e781c207bc3b77c4627b5fd7d7d91d097e7ce6f8750bi0"
+      },
+      {
+        "trait_type": "Side 4",
+        "value": "d7b75b754d1fa055fa3c8f693cebe5feb3bcaeee547e583b5d528ef27b7c3f50i0"
+      },
+      {
+        "trait_type": "Side 5",
+        "value": "550ac057c02b9f55dc882e114353a20bdec462ab853654fe02288dedbc261bb0i1"
+      },
+      {
+        "trait_type": "Side 6",
+        "value": "550ac057c02b9f55dc882e114353a20bdec462ab853654fe02288dedbc261bb0i0"
+      },
+      {
+        "trait_type": "Version",
+        "value": "v3"
+      },
+      {
+        "trait_type": "Title",
+        "value": "SPIRIT ZERO RESET"
+      }
+    ],
+    "name": "Ordinal Cube #530 (SPIRIT ZERO RESET)"
+  },
+  {
+    "inscriptionId": "8675e04e86cd97acc03a8bfc61c1d83f27bc402389d8993186318445c1d436eei0",
+    "inscriptionNumber": 122282476,
+    "blockHeight": 940174,
+    "timestamp": 1773179775,
+    "contentLength": 610,
+    "attributes": [
+      {
+        "trait_type": "Side 1",
+        "value": "29c93f3b3c792cdd08863ddb6e2ea6252ad4efd6ff14894681d0bdc7b624a609i0"
+      },
+      {
+        "trait_type": "Side 2",
+        "value": "a67def4c5e12b096d1ce492814181ea821ae0e14a27aa5640cd85db0e7294002i0"
+      },
+      {
+        "trait_type": "Side 3",
+        "value": "5bb7539d17a150d908d3cec08c6aba7edb875ac8953cdb14b186f9b1aa6cc306i0"
+      },
+      {
+        "trait_type": "Side 4",
+        "value": "3199d3a96e2109a18de86cbe20b805a6b2f428dc8e45c90128a444e29ecc3b06i0"
+      },
+      {
+        "trait_type": "Side 5",
+        "value": "f72b6cee159366f682eb5fb0c40020191eab982b7326b4bf0137eec9aad9d303i0"
+      },
+      {
+        "trait_type": "Side 6",
+        "value": "c480f7244a4db0d93b7c06fb439ed6140f94212f0d6b744bb0834afcc8373a02i0"
+      },
+      {
+        "trait_type": "Version",
+        "value": "v3"
+      },
+      {
+        "trait_type": "Title",
+        "value": "Boneys by Bitcoin Burials"
+      }
+    ],
+    "name": "Ordinal Cube #531 (Boneys by Bitcoin Burials)"
   }
 ]
