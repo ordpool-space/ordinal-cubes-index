@@ -135,6 +135,7 @@ async function main() {
     await commit(cubes, {
       lastScannedId: lastMeta.id,
       lastScannedNumber: lastMeta.number,
+      lastScannedBlockHeight: lastMeta.height,
       blessedTipAtLastRun: tip,
       lastScanAt: new Date().toISOString(),
       source: 'backfill',
