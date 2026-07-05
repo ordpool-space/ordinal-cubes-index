@@ -126,6 +126,7 @@ async function main() {
   const newCursor = {
     lastScannedId: currentId,
     lastScannedNumber: currentMeta.number,
+    lastScannedBlockHeight: currentMeta.height,
     blessedTipAtLastRun: tip,
     lastScanAt: new Date().toISOString(),
     source: 'grind',
