@@ -3,10 +3,7 @@ name: Grind for cubes
 on:
   schedule:
     # Every 10 min, off the hour-boundary (:07 not :00) to reduce
-    # GitHub Actions runner contention. Top-of-the-hour cron triggers
-    # get throttled hardest on shared free runners — actual cadence
-    # was 2–5 hours instead of 10 minutes. :7/:17/etc lands during
-    # low-contention windows; we'll re-measure cadence in a week.
+    # GitHub Actions runner contention.
     - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
     inputs:
@@ -18,11 +15,14 @@ on:
 permissions:
   contents: write
 
-# Never overlap. If a previous run is still going, the new scheduled trigger
-# waits for it to finish (cancel-in-progress: false). GitHub queues at most
-# one pending run per group, so a long-running grind can't pile up backlog.
+# Never overlap. Concurrency serializes runs so a slow grind can't
+# race with a queued one. Combined with the "regression safety net"
+# in the commit&push step below (which skips the push if the remote
+# cursor is already ahead of ours), this fully protects data/cursor.json
+# from any race-induced rewind — the failure mode we hit on 2026-06-19
+# when a rebase --ours took the wrong side and clobbered a backfill.
 concurrency:
-  group: grind
+  group: grind-${{ github.workflow }}
   cancel-in-progress: false
 
 jobs:
@@ -31,6 +31,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -43,8 +45,10 @@ jobs:
 
       - name: Commit & push if changed
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add data/cubes.json data/cursor.json
 
           if git diff --cached --quiet; then
@@ -52,7 +56,44 @@ jobs:
             exit 0
           fi
 
+          # Regression safety net: if the remote cursor is already ahead of
+          # what this run produced, skip the push. Prevents an old checkout
+          # from clobbering a newer state committed by a backfill or an
+          # out-of-band manual update.
+          local_cursor=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/cursor.json','utf8')).lastScannedNumber)")
+          git fetch --quiet origin main
+          remote_cursor=$(git show origin/main:data/cursor.json | node -e "let s=''; process.stdin.on('data',d=>s+=d); process.stdin.on('end',()=>console.log(JSON.parse(s).lastScannedNumber))")
+
+          if [ "$local_cursor" -lt "$remote_cursor" ]; then
+            echo "Local cursor #$local_cursor is BEHIND remote #$remote_cursor — skipping push to avoid regression."
+            exit 0
+          fi
+
           total=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/cubes.json','utf8')).length)")
-          cursor_num=$(node -e "console.log(JSON.parse(require('fs').readFileSync('data/cursor.json','utf8')).lastScannedNumber)")
-          git commit -m "chore: grind run — $total cubes, cursor at #$cursor_num"
-          git push
+          git commit -m "chore: grind run — $total cubes, cursor at #$local_cursor"
+
+          # Push with rebase-retry so a stray concurrent push (e.g. a
+          # workflow_dispatch triggered during a scheduled run) doesn't
+          # abort the whole job. Retry up to 5 times, waiting a few
+          # seconds between attempts.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "attempt $attempt: push rejected — pulling and retrying"
+            git pull --rebase --autostash origin main
+
+            # Re-check the safety net after the rebase — if the remote
+            # advanced past us during the rebase, skip.
+            new_remote_cursor=$(git show origin/main:data/cursor.json | node -e "let s=''; process.stdin.on('data',d=>s+=d); process.stdin.on('end',()=>console.log(JSON.parse(s).lastScannedNumber))")
+            if [ "$local_cursor" -lt "$new_remote_cursor" ]; then
+              echo "Remote cursor advanced to #$new_remote_cursor during rebase — abandoning this run's commit."
+              exit 0
+            fi
+
+            sleep 3
+          done
+
+          echo "push failed after 5 attempts"
+          exit 1
