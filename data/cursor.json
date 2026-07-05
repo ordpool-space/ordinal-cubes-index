@@ -1,7 +1,7 @@
 {
-  "lastScannedId": "5280604b7879d291b2442281ad03f06e332d1688b4975992c00c91d379ad136fi0",
-  "lastScannedNumber": 97047558,
-  "blessedTipAtLastRun": 126814542,
-  "lastScanAt": "2026-07-05T05:54:38.104Z",
-  "source": "grind"
+  "lastScannedId": "9d53b52cb6c9d2f651f5fa7f868c84ff295615106649f071fa8f076b476a9d98i0",
+  "lastScannedNumber": 126814738,
+  "blessedTipAtLastRun": 126814738,
+  "lastScanAt": "2026-07-05T06:11:51.504Z",
+  "source": "backfill-to-tip"
 }
