@@ -8,6 +8,7 @@
   },
   "scripts": {
     "bootstrap": "node scripts/bootstrap.mjs",
-    "grind": "node scripts/grind.mjs"
+    "grind": "node scripts/grind.mjs",
+    "test": "node --test 'scripts/**/*.test.mjs'"
   }
 }

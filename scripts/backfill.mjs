@@ -21,6 +21,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getInscription, getContent, getStatus } from './ord.mjs';
+import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
 
@@ -60,12 +61,24 @@ async function checkOne(n) {
   catch { return null; }
   const attributes = parseCube(body);
   if (!attributes) return null;
+  // firstOwner = mint recipient's ordinals address, from reveal-tx
+  // vout[0] (immutable). Same contract as grind.mjs — see esplora.mjs
+  // for the shape. Null when esplora can't decode; a later re-run
+  // fills it in.
+  let firstOwner = null;
+  try {
+    const revealTxid = revealTxidFromInscriptionId(meta.id);
+    firstOwner = await getFirstOwnerAddress(revealTxid);
+  } catch (err) {
+    console.warn(`  firstOwner fetch failed for ${meta.id}: ${err.message}`);
+  }
   return {
     inscriptionId: meta.id,
     inscriptionNumber: meta.number,
     blockHeight: meta.height,
     timestamp: meta.timestamp,
     contentLength: meta.content_length,
+    firstOwner,
     attributes,
   };
 }

@@ -14,6 +14,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getInscription, getContent, getStatus } from './ord.mjs';
+import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
 
@@ -85,12 +86,27 @@ async function main() {
         const body = await getContent(nextId);
         const attributes = parseCube(body);
         if (attributes) {
+          // First-owner address = the mint recipient's ordinals address,
+          // read from vout[0] of the reveal tx (immutable, so writes once
+          // and caches forever). Consumers filter cubes by this to derive
+          // "cubes minted by the currently-connected wallet" without any
+          // per-user storage. On failure (esplora hiccup, unrecognised
+          // script type) we log + persist null; the backfill script picks
+          // stragglers up on a re-run.
+          let firstOwner = null;
+          try {
+            const revealTxid = revealTxidFromInscriptionId(nextId);
+            firstOwner = await getFirstOwnerAddress(revealTxid);
+          } catch (err) {
+            console.warn(`  firstOwner fetch failed for ${nextId}: ${err.message}`);
+          }
           foundThisRun.push({
             inscriptionId: nextId,
             inscriptionNumber: nextMeta.number,
             blockHeight: nextMeta.height,
             timestamp: nextMeta.timestamp,
             contentLength: nextMeta.content_length,
+            firstOwner,
             attributes,
           });
           knownIds.add(nextId);
