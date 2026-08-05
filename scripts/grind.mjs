@@ -13,7 +13,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getInscription, getContent, getStatus } from './ord.mjs';
+import { getInscription, getContent, getStatus, isNotFoundError } from './ord.mjs';
 import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
@@ -61,7 +61,22 @@ async function main() {
   const foundThisRun = [];
 
   let currentId = cursor.lastScannedId;
-  let currentMeta = await getInscription(currentId);
+  let currentMeta;
+  try {
+    currentMeta = await getInscription(currentId);
+  } catch (err) {
+    // ord tip can regress relative to our cursor (upstream reorg,
+    // ord-proxy scrape hiccup that outlasts the retry budget). The
+    // cursor's inscription id genuinely doesn't resolve. Exit cleanly
+    // — the next scheduled run tries again once ord catches back up,
+    // and CI stays green instead of turning red on a transient
+    // upstream state we don't control.
+    if (isNotFoundError(err)) {
+      console.warn(`Cursor 404 after retries — ord probably in a rewind window (tip=${tip}, cursor #${cursor.lastScannedNumber}). Exiting clean; the next run will retry.`);
+      return;
+    }
+    throw err;
+  }
   let iter = 0;
   let reachedTip = false;
 

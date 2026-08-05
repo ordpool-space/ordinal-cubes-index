@@ -10,12 +10,41 @@ export const ESPLORA_BASE = process.env.ESPLORA_BASE || 'https://api.ordpool.spa
 
 const UA = 'ordinal-cubes-index/1.0 (https://github.com/ordpool-space/ordinal-cubes-index)';
 
+const RETRY_ATTEMPTS = Number(process.env.ESPLORA_RETRY_ATTEMPTS ?? 3);
+const RETRY_BASE_MS = Number(process.env.ESPLORA_RETRY_BASE_MS ?? 750);
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Retry policy: network errors, 5xx, AND 404. api.ordpool.space is
+// backed by our own electrs — the txid we're asking about is a real
+// on-chain reveal, so a 404 means electrs hasn't ingested this tx yet
+// (race with mining) and a short retry usually resolves it. Non-404/5xx
+// (403, 429, …) don't retry.
 async function getJson(path) {
-  const res = await fetch(`${ESPLORA_BASE}${path}`, {
-    headers: { 'Accept': 'application/json', 'User-Agent': UA },
-  });
-  if (!res.ok) throw new Error(`esplora ${path} → HTTP ${res.status}`);
-  return res.json();
+  let lastErr = null;
+  for (let attempt = 1; attempt <= RETRY_ATTEMPTS; attempt++) {
+    try {
+      const res = await fetch(`${ESPLORA_BASE}${path}`, {
+        headers: { 'Accept': 'application/json', 'User-Agent': UA },
+      });
+      if (res.ok) return res.json();
+      const retryable = res.status === 404 || (res.status >= 500 && res.status <= 599);
+      if (!retryable || attempt === RETRY_ATTEMPTS) {
+        throw new Error(`esplora ${path} → HTTP ${res.status}`);
+      }
+      lastErr = new Error(`esplora ${path} → HTTP ${res.status}`);
+    } catch (err) {
+      lastErr = err;
+      if (attempt === RETRY_ATTEMPTS || (err.message && err.message.startsWith('esplora '))) {
+        if (attempt === RETRY_ATTEMPTS) throw err;
+        // else fall through to backoff (retryable HTTP status caught above)
+      }
+    }
+    const delay = RETRY_BASE_MS * Math.pow(2, attempt - 1);
+    console.warn(`  esplora ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastErr?.message ?? 'unknown'}); retrying in ${delay}ms`);
+    await sleep(delay);
+  }
+  throw lastErr ?? new Error(`esplora ${path} — exhausted ${RETRY_ATTEMPTS} attempts`);
 }
 
 /**
