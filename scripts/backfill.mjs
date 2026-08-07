@@ -140,10 +140,19 @@ async function main() {
     }
     totalFound += fresh.length;
 
-    // Cursor walks via metadata of the highest scanned number
+    // Cursor advance requires a live id↔number pair. If the tail
+    // fetch fails, DON'T write a cursor with the old id + new number
+    // (finding #2: grind would start from the old id and skip
+    // everything in the gap). Write cubes.json, log the skip, exit.
     let lastMeta;
-    try { lastMeta = await getInscription(end - 1); }
-    catch { lastMeta = { id: cursor.lastScannedId, number: end - 1 }; }
+    try {
+      lastMeta = await getInscription(end - 1);
+    } catch (err) {
+      await writeJson(CUBES_PATH, applyPositionalNames(cubes));
+      console.warn(`  batch-tail getInscription(#${end - 1}) failed: ${err.message}`);
+      console.warn(`  cubes.json committed but cursor NOT advanced — re-run to continue.`);
+      process.exit(2);
+    }
 
     await commit(cubes, {
       lastScannedId: lastMeta.id,

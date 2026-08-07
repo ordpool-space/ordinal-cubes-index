@@ -20,34 +20,54 @@ function isRetryableStatus(status) {
   return status === 404 || (status >= 500 && status <= 599);
 }
 
+class OrdRequestError extends Error {
+  constructor(message, { lastStatus, saw404 } = {}) {
+    super(message);
+    this.lastStatus = lastStatus;
+    // saw404: any attempt in this run got a 404 back from ord — a
+    // reorg signal even if the final attempt hit a network glitch.
+    this.saw404 = !!saw404;
+  }
+}
+
 async function fetchWithRetry(path, headers) {
   let lastReason = 'unknown';
+  let lastStatus;
+  let saw404 = false;
   for (let attempt = 1; attempt <= RETRY_ATTEMPTS; attempt++) {
     let status;
     try {
       const res = await fetch(`${ORD_BASE}${path}`, { headers });
-      if (res.ok) return res;
       status = res.status;
+      lastStatus = status;
+      if (res.ok) return res;
+      if (status === 404) saw404 = true;
       if (!isRetryableStatus(status)) {
-        throw new Error(`ord ${path} → HTTP ${status}`);
+        throw new OrdRequestError(`ord ${path} → HTTP ${status}`, { lastStatus: status, saw404 });
       }
       lastReason = `HTTP ${status}`;
     } catch (err) {
+      if (err instanceof OrdRequestError) throw err;
       if (status !== undefined && !isRetryableStatus(status)) throw err;
       lastReason = err.message ?? String(err);
     }
     if (attempt === RETRY_ATTEMPTS) {
-      throw new Error(`ord ${path} — ${lastReason} (exhausted ${RETRY_ATTEMPTS} attempts)`);
+      throw new OrdRequestError(
+        `ord ${path} — ${lastReason} (exhausted ${RETRY_ATTEMPTS} attempts)`,
+        { lastStatus, saw404 },
+      );
     }
     const delay = RETRY_BASE_MS * Math.pow(2, attempt - 1);
     console.warn(`  ord ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastReason}); retrying in ${delay}ms`);
     await sleep(delay);
   }
-  throw new Error(`ord ${path} — unreachable`);
+  throw new OrdRequestError(`ord ${path} — unreachable`, { lastStatus, saw404 });
 }
 
 async function getJson(path) {
   const res = await fetchWithRetry(path, { 'Accept': 'application/json', 'User-Agent': UA });
+  // Malformed body → SyntaxError propagates to the caller unretried.
+  // Ord's JSON is well-formed in practice; this hasn't happened.
   return res.json();
 }
 
@@ -75,11 +95,12 @@ export const getStatus = () =>
   getJson('/status');
 
 /**
- * Returns true when an Error thrown by any exported function above
- * was ultimately a 404 (after retries). Callers that treat a
- * persistent 404 as "cursor stale, come back next run" can use this
- * to distinguish it from real crashes.
+ * True when the failure was a 404 — either the last attempt hit 404
+ * OR any attempt in the retry chain did. Callers use this to exit
+ * clean on stale-cursor / rewind conditions.
  */
 export function isNotFoundError(err) {
-  return err instanceof Error && /HTTP 404/.test(err.message);
+  if (!(err instanceof Error)) return false;
+  if (err instanceof OrdRequestError) return err.lastStatus === 404 || err.saw404 === true;
+  return /HTTP 404/.test(err.message);
 }

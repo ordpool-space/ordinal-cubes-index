@@ -92,6 +92,14 @@ async function main() {
     try {
       nextMeta = await getInscription(nextId);
     } catch (err) {
+      if (isNotFoundError(err)) {
+        // Persistent 404 on a mid-walk id: ord isn't going to resolve
+        // this even after retries. Exit clean and let the next run
+        // pick up if the linked list heals; don't advance the cursor
+        // past a broken link.
+        console.warn(`  mid-walk 404 on ${nextId} — ord returned 404 after retries. Exiting clean.`);
+        return;
+      }
       console.warn(`  fetch metadata failed for ${nextId}: ${err.message} — aborting run`);
       break;
     }

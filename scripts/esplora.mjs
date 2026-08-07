@@ -32,8 +32,12 @@ async function getJson(path) {
       const res = await fetch(`${ESPLORA_BASE}${path}`, {
         headers: { 'Accept': 'application/json', 'User-Agent': UA },
       });
-      if (res.ok) return res.json();
       status = res.status;
+      if (res.ok) {
+        // await ensures a malformed JSON body's rejection is caught by
+        // this try/catch and retried, not thrown past the loop.
+        return await res.json();
+      }
       if (!isRetryableStatus(status)) {
         throw new Error(`esplora ${path} → HTTP ${status}`);
       }
@@ -41,7 +45,7 @@ async function getJson(path) {
     } catch (err) {
       // Non-retryable HTTP: rethrow immediately.
       if (status !== undefined && !isRetryableStatus(status)) throw err;
-      // Network error / DNS / socket reset: retry it.
+      // Network error / DNS / socket reset / JSON parse failure: retry.
       lastReason = err.message ?? String(err);
     }
     if (attempt === RETRY_ATTEMPTS) {
@@ -51,7 +55,6 @@ async function getJson(path) {
     console.warn(`  esplora ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastReason}); retrying in ${delay}ms`);
     await sleep(delay);
   }
-  // Unreachable — loop always either returns or throws.
   throw new Error(`esplora ${path} — unreachable`);
 }
 
