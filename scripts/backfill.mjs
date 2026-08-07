@@ -149,6 +149,7 @@ async function main() {
       lastScannedId: lastMeta.id,
       lastScannedNumber: lastMeta.number,
       lastScannedBlockHeight: lastMeta.height,
+      lastScannedBlockTimestamp: lastMeta.timestamp,
       blessedTipAtLastRun: tip,
       lastScanAt: new Date().toISOString(),
       source: 'backfill',

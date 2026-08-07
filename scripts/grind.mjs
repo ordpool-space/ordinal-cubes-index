@@ -158,6 +158,7 @@ async function main() {
     lastScannedId: currentId,
     lastScannedNumber: currentMeta.number,
     lastScannedBlockHeight: currentMeta.height,
+    lastScannedBlockTimestamp: currentMeta.timestamp,
     blessedTipAtLastRun: tip,
     lastScanAt: new Date().toISOString(),
     source: 'grind',

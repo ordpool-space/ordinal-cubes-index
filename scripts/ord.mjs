@@ -1,11 +1,11 @@
 // Minimal client for our own ord instance (https://ord.ordpool.space).
 // JSON API is enabled. No auth, no rate limit (it's ours).
 //
-// Retry policy: every request retries up to RETRY_ATTEMPTS times on
-// network errors, 5xx, AND 404 — the last one because ord.ordpool.space
-// scrapes ordinals.com, so a transient upstream hiccup surfaces here as
-// a temporary 404 that resolves within seconds. Non-404/5xx status
-// codes (403, 429, etc.) don't retry.
+// Retry policy: network errors, 5xx, AND 404 — the last one because
+// ord.ordpool.space scrapes ordinals.com, so a transient upstream
+// hiccup surfaces here as a temporary 404 that resolves within
+// seconds. All other non-2xx statuses (403, 429, …) throw immediately
+// with no retry.
 
 export const ORD_BASE = process.env.ORD_BASE || 'https://ord.ordpool.space';
 
@@ -16,38 +16,34 @@ const RETRY_BASE_MS = Number(process.env.ORD_RETRY_BASE_MS ?? 750);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-function shouldRetry(status, err) {
-  if (err) return true;                      // network error, DNS, socket reset
-  if (status === 404) return true;           // ord-proxy upstream hiccup
-  if (status >= 500 && status <= 599) return true;
-  return false;
+function isRetryableStatus(status) {
+  return status === 404 || (status >= 500 && status <= 599);
 }
 
 async function fetchWithRetry(path, headers) {
-  let lastErr = null;
-  let lastStatus = null;
+  let lastReason = 'unknown';
   for (let attempt = 1; attempt <= RETRY_ATTEMPTS; attempt++) {
+    let status;
     try {
       const res = await fetch(`${ORD_BASE}${path}`, { headers });
       if (res.ok) return res;
-      lastStatus = res.status;
-      if (!shouldRetry(res.status, null) || attempt === RETRY_ATTEMPTS) {
-        throw new Error(`ord ${path} → HTTP ${res.status}`);
+      status = res.status;
+      if (!isRetryableStatus(status)) {
+        throw new Error(`ord ${path} → HTTP ${status}`);
       }
+      lastReason = `HTTP ${status}`;
     } catch (err) {
-      lastErr = err;
-      // Re-throw immediately when the error message already says "HTTP"
-      // (thrown from the block above on a non-retryable status).
-      if (attempt === RETRY_ATTEMPTS || (err.message && err.message.startsWith('ord '))) {
-        throw err;
-      }
-      if (!shouldRetry(null, err)) throw err;
+      if (status !== undefined && !isRetryableStatus(status)) throw err;
+      lastReason = err.message ?? String(err);
+    }
+    if (attempt === RETRY_ATTEMPTS) {
+      throw new Error(`ord ${path} — ${lastReason} (exhausted ${RETRY_ATTEMPTS} attempts)`);
     }
     const delay = RETRY_BASE_MS * Math.pow(2, attempt - 1);
-    console.warn(`  ord ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastStatus ?? lastErr?.message ?? 'unknown'}); retrying in ${delay}ms`);
+    console.warn(`  ord ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastReason}); retrying in ${delay}ms`);
     await sleep(delay);
   }
-  throw lastErr ?? new Error(`ord ${path} — exhausted ${RETRY_ATTEMPTS} attempts`);
+  throw new Error(`ord ${path} — unreachable`);
 }
 
 async function getJson(path) {
@@ -85,5 +81,5 @@ export const getStatus = () =>
  * to distinguish it from real crashes.
  */
 export function isNotFoundError(err) {
-  return err instanceof Error && / HTTP 404$/.test(err.message);
+  return err instanceof Error && /HTTP 404/.test(err.message);
 }

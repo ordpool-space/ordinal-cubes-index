@@ -5,6 +5,11 @@
 // which never changes once the tx is on-chain, so results cache forever.
 // This is what backs the `firstOwner` field on each cube: vout[0] of the
 // reveal tx is the mint recipient's ordinals address, immutable.
+//
+// Retry policy: network errors, 5xx, AND 404 — the last one because
+// api.ordpool.space is backed by our own electrs, so a 404 on a real
+// on-chain txid means electrs hasn't ingested it yet (mining race). All
+// other non-2xx statuses (403, 429, …) throw immediately with no retry.
 
 export const ESPLORA_BASE = process.env.ESPLORA_BASE || 'https://api.ordpool.space/api';
 
@@ -15,36 +20,39 @@ const RETRY_BASE_MS = Number(process.env.ESPLORA_RETRY_BASE_MS ?? 750);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// Retry policy: network errors, 5xx, AND 404. api.ordpool.space is
-// backed by our own electrs — the txid we're asking about is a real
-// on-chain reveal, so a 404 means electrs hasn't ingested this tx yet
-// (race with mining) and a short retry usually resolves it. Non-404/5xx
-// (403, 429, …) don't retry.
+function isRetryableStatus(status) {
+  return status === 404 || (status >= 500 && status <= 599);
+}
+
 async function getJson(path) {
-  let lastErr = null;
+  let lastReason = 'unknown';
   for (let attempt = 1; attempt <= RETRY_ATTEMPTS; attempt++) {
+    let status;
     try {
       const res = await fetch(`${ESPLORA_BASE}${path}`, {
         headers: { 'Accept': 'application/json', 'User-Agent': UA },
       });
       if (res.ok) return res.json();
-      const retryable = res.status === 404 || (res.status >= 500 && res.status <= 599);
-      if (!retryable || attempt === RETRY_ATTEMPTS) {
-        throw new Error(`esplora ${path} → HTTP ${res.status}`);
+      status = res.status;
+      if (!isRetryableStatus(status)) {
+        throw new Error(`esplora ${path} → HTTP ${status}`);
       }
-      lastErr = new Error(`esplora ${path} → HTTP ${res.status}`);
+      lastReason = `HTTP ${status}`;
     } catch (err) {
-      lastErr = err;
-      if (attempt === RETRY_ATTEMPTS || (err.message && err.message.startsWith('esplora '))) {
-        if (attempt === RETRY_ATTEMPTS) throw err;
-        // else fall through to backoff (retryable HTTP status caught above)
-      }
+      // Non-retryable HTTP: rethrow immediately.
+      if (status !== undefined && !isRetryableStatus(status)) throw err;
+      // Network error / DNS / socket reset: retry it.
+      lastReason = err.message ?? String(err);
+    }
+    if (attempt === RETRY_ATTEMPTS) {
+      throw new Error(`esplora ${path} — ${lastReason} (exhausted ${RETRY_ATTEMPTS} attempts)`);
     }
     const delay = RETRY_BASE_MS * Math.pow(2, attempt - 1);
-    console.warn(`  esplora ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastErr?.message ?? 'unknown'}); retrying in ${delay}ms`);
+    console.warn(`  esplora ${path} — attempt ${attempt}/${RETRY_ATTEMPTS} failed (${lastReason}); retrying in ${delay}ms`);
     await sleep(delay);
   }
-  throw lastErr ?? new Error(`esplora ${path} — exhausted ${RETRY_ATTEMPTS} attempts`);
+  // Unreachable — loop always either returns or throws.
+  throw new Error(`esplora ${path} — unreachable`);
 }
 
 /**
@@ -57,13 +65,9 @@ export const getTx = (txid) => getJson(`/tx/${txid}`);
 /**
  * Extract the first-owner address from a cube reveal txid.
  * By SDK contract every cube reveal has vout[0] = inscription
- * recipient at 546 sats (per `cat21-transfer.helper.ts` line 116
- * "Cat ordinal travels here via FIFO"). Returns lowercase for
- * case-insensitive comparison against wallet-provided addresses.
- * Returns null when esplora can't decode the output's address.
- *
- * @param {string} revealTxid — 64-hex reveal tx id (no `i0` suffix)
- * @returns {Promise<string | null>}
+ * recipient at 546 sats. Returns lowercase for case-insensitive
+ * comparison against wallet-provided addresses. Returns null when
+ * esplora can't decode the output's address.
  */
 export async function getFirstOwnerAddress(revealTxid) {
   const tx = await getTx(revealTxid);
@@ -74,8 +78,8 @@ export async function getFirstOwnerAddress(revealTxid) {
 /**
  * Given an inscription id like `<txid>i0`, strip the `i<n>` suffix
  * to return the reveal txid. The cube-inscription contract always
- * uses `i0` (see parse-cube.mjs — CUBE_RENDERER_IDS all end with i0)
- * but the extractor is permissive about the index for robustness.
+ * uses `i0`, but the extractor is permissive about the index for
+ * robustness.
  */
 export function revealTxidFromInscriptionId(inscriptionId) {
   const m = inscriptionId.match(/^([0-9a-f]{64})i\d+$/i);
