@@ -1,9 +1,9 @@
 {
-  "lastScannedId": "408b2f8a364445328ffdfaef9312208839112b23903fd64210b237d7142e14fei0",
-  "lastScannedNumber": 127199122,
-  "lastScannedBlockHeight": 963638,
-  "lastScannedBlockTimestamp": 1787435994,
-  "blessedTipAtLastRun": 127199123,
-  "lastScanAt": "2026-08-22T22:37:46.339Z",
+  "lastScannedId": "1766e85af2a40aab55672c9af620363b76745b11d100ed2c3788d8f36357e51ei0",
+  "lastScannedNumber": 127199125,
+  "lastScannedBlockHeight": 963639,
+  "lastScannedBlockTimestamp": 1787438794,
+  "blessedTipAtLastRun": 127199126,
+  "lastScanAt": "2026-08-22T22:58:31.857Z",
   "source": "grind"
 }
