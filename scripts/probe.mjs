@@ -12,15 +12,12 @@
 // loads a batch of images, writes the outcome into a <pre> once every
 // image has fired `load` or `error`, and `--dump-dom` prints the page.
 
-import { execFile, execFileSync } from 'node:child_process';
+import { execFileSync, spawn } from 'node:child_process';
 import { existsSync } from 'node:fs';
 import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { promisify } from 'node:util';
 import { ORD_BASE } from './ord.mjs';
-
-const execFileAsync = promisify(execFile);
 
 /** Inscription id shape the renderer can request at all; anything else is black without a probe. */
 export const INSCRIPTION_ID = /^[0-9a-f]{64}i\d+$/;
@@ -117,13 +114,41 @@ async function runChrome(chrome, html) {
       '--dump-dom',
       `file://${page}`,
     ];
-    const { stdout } = await execFileAsync(chrome, args, {
-      timeout: BUDGET_MS + 30_000,
-      maxBuffer: 64 * 1024 * 1024,
-    });
-    return stdout;
+    // The DOM arrives on stdout within seconds; with a fresh profile dir
+    // Chrome then lingers for about a minute and a half before it exits
+    // (measured: 2 s to the dump, 100 s to exit). Resolve on the dump and
+    // stop the process instead of waiting for it.
+    const child = spawn(chrome, args, { stdio: ['ignore', 'pipe', 'ignore'] });
+    const exited = new Promise((resolve) => child.on('close', resolve));
+    try {
+      return await new Promise((resolve, reject) => {
+        let stdout = '';
+        let settled = false;
+        const finish = (fn, value) => {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          child.kill();
+          fn(value);
+        };
+        const timer = setTimeout(
+          () => finish(reject, new Error(`chrome probe produced no DOM within ${BUDGET_MS + 30_000}ms`)),
+          BUDGET_MS + 30_000,
+        );
+        child.stdout.on('data', (chunk) => {
+          stdout += chunk;
+          if (stdout.includes('</html>')) finish(resolve, stdout);
+        });
+        child.on('error', (err) => finish(reject, err));
+        child.on('close', () => finish(resolve, stdout));
+      });
+    } finally {
+      // Let the process go before its profile dir is removed underneath it.
+      await Promise.race([exited, new Promise((r) => setTimeout(r, 5_000)).then(() => child.kill('SIGKILL'))]);
+      await exited;
+    }
   } finally {
-    await rm(dir, { recursive: true, force: true });
+    await rm(dir, { recursive: true, force: true, maxRetries: 3, retryDelay: 250 });
   }
 }
 
