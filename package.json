@@ -9,6 +9,7 @@
   "scripts": {
     "bootstrap": "node scripts/bootstrap.mjs",
     "grind": "node scripts/grind.mjs",
+    "rarity": "node scripts/rarity.mjs",
     "test": "node --test 'scripts/**/*.test.mjs'"
   }
 }

@@ -46,6 +46,43 @@ Three different versions have been released so far, each with minor bug fixes an
 
 `data/validation.json` records the result of the one-time bootstrap run (530 cubes pulled from the Magic Eden archive, re-validated against our own ord).
 
+`data/sides.json` holds one entry per side inscription ever used on a cube, resolved once and kept forever (the inscription is immutable):
+
+```json
+"df58fbb44dbb2a9b17405f944c8ff966fd120cccda87873f3206f012ea239bebi0": {
+  "contentType": "image/png",
+  "exists": true,
+  "renderable": true,
+  "width": 600,
+  "height": 600,
+  "collection": "bitcoinonezero"
+}
+```
+
+`renderable` is what the cube renderer sees: it loads every side as an `<img>` (three.js `TextureLoader`), so a face is black exactly when the browser cannot decode the side as an image. The probe asks headless Chrome that same question. `collection` is the Magic Eden symbol from the [archive's reverse index](https://github.com/ordpool-space/magic-eden-ordinals-archive#by-idprefixcsvgz-reverse-index), `null` when the archive does not know the inscription.
+
+`data/rarity.json` is the score over all cubes (see [Rarity](#rarity)): the rules it was computed with, the collection table, and one row per cube in canonical order:
+
+```json
+{
+  "inscriptionId": "…i0",
+  "position": 12,
+  "status": "scored",            // scored | cursed | after-close
+  "cursed": [],                  // duplicate-side | black-side | reused-inscription
+  "blackSides": [],              // 1-based faces that do not render
+  "reusedSides": [],             // 1-based faces claimed by an earlier cube
+  "collection": "omb",           // all six sides from this collection, else null
+  "collections": ["omb"],        // every collection the cube shows
+  "validOrdinal": 11,            // position among scored cubes, in mint order
+  "tier": 1,
+  "tierBonus": 100,
+  "popularity": 17,              // scored cubes showing this collection
+  "popularityPoints": 100,
+  "score": 200,
+  "rank": 1                      // leaderboard position, strict 1..n
+}
+```
+
 ## How it works
 
 **Phase A — Bootstrap** (`scripts/bootstrap.mjs`, run once)
@@ -65,6 +102,37 @@ Each `BATCH_COMMIT` (default 10000) inscriptions, progress is committed to `cube
 **Phase C — Steady state** (`.github/workflows/grind.yml`)
 
 Continuous cron runs `scripts/grind.mjs` with the default 5000-iteration budget. Picks up wherever the cursor left off. If anything changed, commits and pushes. Idempotent — re-running with no new inscriptions is a no-op.
+
+**Phase D — Rarity** (`scripts/rarity.mjs`, runs after every grind)
+
+Resolves the sides of any new cube into `data/sides.json` (content type from our own backend, image probe in the runner's Chrome, collection from the archive's reverse index), then recomputes `data/rarity.json` over all cubes. With nothing new, both files come out byte-identical, so the run commits nothing. `SKIP_SIDES=1 npm run rarity` scores from the cached sides only; `ARCHIVE_BASE=file:///path/to/magic-eden-ordinals-archive` reads the reverse index from a local checkout.
+
+## Rarity
+
+Cubes are scored against each other, and the score moves with every new cube. These rules are the specification; `scripts/score.mjs` implements them and `data/rarity.json` is the result.
+
+**A cube is cursed, and gets no score, when any of these holds:**
+
+- two of its faces show the same inscription (`duplicate-side`);
+- a face is black because its side does not render as an image (`black-side`), which covers missing inscriptions, text, HTML, JSON, 3D models and undecodable bytes;
+- a side was already claimed by an earlier cube (`reused-inscription`). Each cube claims its six inscriptions in mint order, block height first and inscription number within a block, whether or not the claiming cube is itself cursed. First is first.
+
+Every cube in `cubes.json` has a row in `rarity.json`, and every row is one of `scored`, `cursed` or `after-close`. The experiment closes after 10,000 scored cubes; later cubes are `after-close`, neither cursed nor scored. A run that cannot settle a side's image probe keeps the sides it did resolve, leaves `rarity.json` untouched and exits non-zero; the next run retries, so a brand-new cube can be missing from `rarity.json` for a run or two but is never published with a guessed status.
+
+**Score = tier bonus + popularity points.**
+
+| Tier | Ordinal among scored cubes | Bonus |
+|---|---|---|
+| 1 | 1 to 100 | 100 |
+| 2 | 101 to 1,000 | 50 |
+| 3 | 1,001 to 5,000 | 25 |
+| 4 | 5,001 to 10,000 | 0 |
+
+The popularity of a collection is the number of scored cubes that show at least one side from it. A cube whose six sides all come from one collection earns popularity points: 100 × its collection's popularity ÷ the popularity of the most popular collection, rounded. Mixed cubes and cubes from collections the archive does not know earn none. Both axes top out at 100: the first hundred cubes keep their head start, and a late cube can still climb past everything below them by choosing its collection well.
+
+**Rank** orders scored cubes by score, highest first; on a tie the older cube wins (same mint order as above), so ranks are a strict 1 to n.
+
+Collections come from the frozen [Magic Eden archive](https://github.com/ordpool-space/magic-eden-ordinals-archive), the same source the mint page draws its suggestions from. Further sources can be added later at one place (`scripts/collections.mjs`).
 
 ## Running locally
 

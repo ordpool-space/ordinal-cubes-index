@@ -43,13 +43,23 @@ jobs:
           MAX_ITERATIONS: ${{ inputs.max_iterations || '5000' }}
         run: npm run grind
 
+      # Resolves the sides of any new cube (content type, image probe in the
+      # runner's Chrome, Magic Eden collection) and recomputes the score over
+      # all cubes. With nothing new, both data files come out byte-identical.
+      # A run that cannot settle a side exits non-zero without touching
+      # rarity.json; the grind's own result still ships, and the next run
+      # retries the side. The step is marked, not fatal, for that reason.
+      - name: Rarity
+        continue-on-error: true
+        run: npm run rarity
+
       - name: Commit & push if changed
         run: |
           set -e
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add data/cubes.json data/cursor.json
+          git add data/cubes.json data/cursor.json data/sides.json data/rarity.json
 
           if git diff --cached --quiet; then
             echo "No changes."
