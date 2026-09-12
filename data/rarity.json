@@ -30,6 +30,7 @@
   "scoredCubes": 403,
   "cursedCubes": 129,
   "afterCloseCubes": 0,
+  "chromeCubes": 15,
   "collections": [
     {
       "symbol": "omb",
@@ -977,6 +978,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -994,6 +996,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinastrals",
       "collections": [
         "ordinastrals"
@@ -1013,6 +1016,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "bitcoin-blocks-the_dan_files",
       "collections": [
         "bitcoin-blocks-the_dan_files"
@@ -1032,6 +1043,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "satoshi-punks",
       "collections": [
         "satoshi-punks"
@@ -1051,6 +1063,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "block9bonsai",
       "collections": [
         "block9bonsai"
@@ -1070,6 +1083,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoinshrooms",
@@ -1097,6 +1111,7 @@
         4,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoinshrooms",
@@ -1118,6 +1133,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 6,
@@ -1135,6 +1151,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "btc-machine-509s",
@@ -1159,6 +1176,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "astral-babes",
@@ -1181,6 +1199,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1200,6 +1219,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1219,6 +1239,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1238,6 +1259,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1257,6 +1279,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1276,6 +1299,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1297,6 +1321,7 @@
         3
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "omb"
@@ -1318,6 +1343,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1339,6 +1365,7 @@
       "reusedSides": [
         3
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "btc_annons_artefacts",
@@ -1362,6 +1389,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzshape",
       "collections": [
         "spzshape"
@@ -1385,6 +1413,7 @@
       "reusedSides": [
         4
       ],
+      "chromeSides": [],
       "collection": "speculum-aeternum",
       "collections": [
         "speculum-aeternum"
@@ -1406,6 +1435,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "borginals",
@@ -1426,6 +1456,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "neon-bones",
       "collections": [
         "neon-bones"
@@ -1447,6 +1478,14 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "bubbles",
       "collections": [
         "bubbles"
@@ -1466,6 +1505,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "gm-ordinals",
       "collections": [
         "gm-ordinals"
@@ -1485,6 +1525,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-shards",
       "collections": [
         "ordinal-shards"
@@ -1504,6 +1545,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": null,
       "collections": [],
       "validOrdinal": 13,
@@ -1530,6 +1579,14 @@
         5,
         6
       ],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -1547,6 +1604,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -1566,6 +1624,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "artifacts-by-lemonhaze"
@@ -1585,6 +1644,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-shards",
       "collections": [
         "ordinal-shards"
@@ -1604,6 +1664,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -1623,6 +1684,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-shards",
       "collections": [
         "ordinal-shards"
@@ -1642,6 +1704,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-shards",
       "collections": [
         "ordinal-shards"
@@ -1661,6 +1724,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoinrocks",
       "collections": [
         "bitcoinrocks"
@@ -1680,6 +1744,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-shards",
       "collections": [
         "ordinal-shards"
@@ -1699,6 +1764,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "basedpunks",
       "collections": [
         "basedpunks"
@@ -1718,6 +1784,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spunkart",
       "collections": [
         "spunkart"
@@ -1737,6 +1804,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "symmetria-evolvitur",
       "collections": [
         "symmetria-evolvitur"
@@ -1756,6 +1824,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "skullx-hell-raiders",
       "collections": [
         "skullx-hell-raiders"
@@ -1775,6 +1844,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -1794,6 +1864,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -1813,6 +1884,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -1832,6 +1904,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "skullx-hell-raiders",
       "collections": [
         "skullx-hell-raiders"
@@ -1851,6 +1924,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "symmetria-evolvitur",
       "collections": [
         "symmetria-evolvitur"
@@ -1870,6 +1944,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -1889,6 +1964,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lilpeepos",
       "collections": [
         "lilpeepos"
@@ -1908,6 +1984,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -1927,6 +2004,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "npc",
       "collections": [
         "npc"
@@ -1946,6 +2024,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -1974,6 +2053,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-digits",
       "collections": [
         "bitcoin-digits"
@@ -2002,6 +2082,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-digits",
       "collections": [
         "bitcoin-digits"
@@ -2030,6 +2111,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitmap",
       "collections": [
         "bitmap"
@@ -2049,6 +2131,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "dogepunks",
       "collections": [
         "dogepunks"
@@ -2068,6 +2151,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -2096,6 +2180,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-digits",
       "collections": [
         "bitcoin-digits"
@@ -2124,6 +2209,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -2141,6 +2227,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "oracles",
       "collections": [
         "oracles"
@@ -2160,6 +2247,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "the-ordinal-war",
       "collections": [
         "the-ordinal-war"
@@ -2179,6 +2267,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-rabbits",
       "collections": [
         "ordinal-rabbits"
@@ -2198,6 +2287,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -2222,6 +2312,7 @@
         1,
         2
       ],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -2241,6 +2332,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "kmb",
       "collections": [
         "kmb"
@@ -2260,6 +2352,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pingoos",
       "collections": [
         "pingoos"
@@ -2279,6 +2372,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2298,6 +2392,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "naked-frogs",
       "collections": [
         "naked-frogs"
@@ -2317,6 +2412,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordillas",
       "collections": [
         "ordillas"
@@ -2345,6 +2441,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-digits",
       "collections": [
         "bitcoin-digits"
@@ -2364,6 +2461,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -2383,6 +2481,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "uncommon-doges",
       "collections": [
         "uncommon-doges"
@@ -2402,6 +2501,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "hug",
       "collections": [
         "hug"
@@ -2421,6 +2521,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "impressionist_visions",
       "collections": [
         "impressionist_visions"
@@ -2440,6 +2541,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "neopunks",
       "collections": [
         "neopunks"
@@ -2464,6 +2566,7 @@
         3,
         6
       ],
+      "chromeSides": [],
       "collection": "ordillas",
       "collections": [
         "ordillas"
@@ -2483,6 +2586,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rare78",
       "collections": [
         "rare78"
@@ -2502,6 +2606,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-bandits",
       "collections": [
         "bitcoin-bandits"
@@ -2521,6 +2626,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -2540,6 +2646,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "piggies-world",
       "collections": [
         "piggies-world"
@@ -2559,6 +2666,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal_geese",
       "collections": [
         "ordinal_geese"
@@ -2578,6 +2686,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2597,6 +2706,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-worlds",
       "collections": [
         "ordinal-worlds"
@@ -2616,6 +2726,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "abc-abracadabra",
       "collections": [
         "abc-abracadabra"
@@ -2635,6 +2746,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -2658,6 +2770,7 @@
       "reusedSides": [
         4
       ],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2682,6 +2795,7 @@
         1,
         6
       ],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2706,6 +2820,7 @@
         2,
         3
       ],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -2725,6 +2840,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "astral-babes",
       "collections": [
         "astral-babes"
@@ -2750,6 +2866,7 @@
         3,
         5
       ],
+      "chromeSides": [],
       "collection": "ordinal-worlds",
       "collections": [
         "ordinal-worlds"
@@ -2777,6 +2894,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2803,6 +2921,7 @@
         3,
         5
       ],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2822,6 +2941,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "clay-collective",
       "collections": [
         "clay-collective"
@@ -2848,6 +2968,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "21bigbusiness"
@@ -2867,6 +2988,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ape-runners",
       "collections": [
         "ape-runners"
@@ -2890,6 +3012,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -2909,6 +3032,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "abc-abracadabra",
       "collections": [
         "abc-abracadabra"
@@ -2928,6 +3052,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -2947,6 +3072,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -2966,6 +3092,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -2993,6 +3120,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": "cypherglyphs",
       "collections": [
         "cypherglyphs"
@@ -3012,6 +3140,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bob_on_bitcoin",
       "collections": [
         "bob_on_bitcoin"
@@ -3031,6 +3160,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "dogepunks",
       "collections": [
         "dogepunks"
@@ -3050,6 +3180,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -3069,6 +3200,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-bandits",
       "collections": [
         "bitcoin-bandits"
@@ -3088,6 +3220,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-fomojis",
       "collections": [
         "ordinal-fomojis"
@@ -3107,6 +3240,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "block9_pomb",
       "collections": [
         "block9_pomb"
@@ -3126,6 +3260,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "neopunks",
       "collections": [
         "neopunks"
@@ -3145,6 +3280,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -3164,6 +3300,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "genesis_n9nes",
       "collections": [
         "genesis_n9nes"
@@ -3183,6 +3320,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "symmetria-evolvitur",
       "collections": [
         "symmetria-evolvitur"
@@ -3202,6 +3340,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "antediluvian",
       "collections": [
         "antediluvian"
@@ -3221,6 +3360,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -3240,6 +3380,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 80,
@@ -3257,6 +3398,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 81,
@@ -3274,6 +3416,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc-machines",
       "collections": [
         "btc-machines"
@@ -3293,6 +3436,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -3312,6 +3456,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -3331,6 +3476,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "diamonds",
       "collections": [
         "diamonds"
@@ -3350,6 +3496,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -3369,6 +3516,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinookis",
       "collections": [
         "ordinookis"
@@ -3388,6 +3536,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -3407,6 +3556,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinalrugs",
       "collections": [
         "ordinalrugs"
@@ -3426,6 +3576,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "yokai_avengers",
       "collections": [
         "yokai_avengers"
@@ -3445,6 +3596,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -3464,6 +3616,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks-i2",
       "collections": [
         "bitcoin-punks-i2"
@@ -3483,6 +3636,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "immortal_pepes",
       "collections": [
         "immortal_pepes"
@@ -3502,6 +3656,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "distortion",
       "collections": [
         "distortion"
@@ -3521,6 +3683,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "honey_badgers",
       "collections": [
         "honey_badgers"
@@ -3549,6 +3712,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "lilpeepos",
@@ -3572,6 +3736,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordskull",
       "collections": [
         "ordskull"
@@ -3591,6 +3756,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ord-chad",
       "collections": [
         "ord-chad"
@@ -3610,6 +3776,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -3629,6 +3796,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -3653,6 +3821,7 @@
         1,
         3
       ],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -3672,6 +3841,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nakamotos-on-bitcoin",
       "collections": [
         "nakamotos-on-bitcoin"
@@ -3695,6 +3865,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "stamp",
@@ -3715,6 +3886,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -3742,6 +3914,7 @@
         4,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -3761,6 +3934,12 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": null,
       "collections": [
         "doodinals"
@@ -3780,6 +3959,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "planetary-ordinals",
       "collections": [
         "planetary-ordinals"
@@ -3809,6 +3989,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -3826,6 +4007,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-magazine",
       "collections": [
         "bitcoin-magazine"
@@ -3845,6 +4027,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoin-cryptodickbutts",
@@ -3869,6 +4052,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzshape",
       "collections": [
         "spzshape"
@@ -3888,6 +4072,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzbybits",
       "collections": [
         "spzbybits"
@@ -3907,6 +4092,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzshape",
       "collections": [
         "spzshape"
@@ -3926,6 +4112,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 108,
@@ -3943,6 +4130,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzbybits",
       "collections": [
         "spzbybits"
@@ -3962,6 +4150,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzbybits",
       "collections": [
         "spzbybits"
@@ -3981,6 +4170,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordirobots",
       "collections": [
         "ordirobots"
@@ -4000,6 +4190,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "naked-frogs",
       "collections": [
         "naked-frogs"
@@ -4019,6 +4210,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzbybits",
       "collections": [
         "spzbybits"
@@ -4038,6 +4230,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzshape",
       "collections": [
         "spzshape"
@@ -4057,6 +4250,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -4076,6 +4270,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -4104,6 +4299,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -4121,6 +4317,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "spzasia",
       "collections": [
         "spzasia"
@@ -4147,6 +4344,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "banksy",
@@ -4171,6 +4369,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -4195,6 +4394,7 @@
         1,
         4
       ],
+      "chromeSides": [],
       "collection": "spzasia",
       "collections": [
         "spzasia"
@@ -4214,6 +4414,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -4233,6 +4434,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pixel-doges",
       "collections": [
         "pixel-doges"
@@ -4252,6 +4454,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -4271,6 +4474,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-bandits",
       "collections": [
         "bitcoin-bandits"
@@ -4290,6 +4494,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal_miners",
       "collections": [
         "ordinal_miners"
@@ -4309,6 +4514,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -4328,6 +4534,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinary-people",
       "collections": [
         "ordinary-people"
@@ -4347,6 +4554,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "blurred-bitcoin-logos",
       "collections": [
         "blurred-bitcoin-logos"
@@ -4366,6 +4574,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "bevm_whitepaper",
       "collections": [
         "bevm_whitepaper"
@@ -4385,6 +4601,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "ordinauts"
@@ -4404,6 +4621,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "girl",
       "collections": [
         "girl"
@@ -4423,6 +4641,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pepespizza",
       "collections": [
         "pepespizza"
@@ -4442,6 +4661,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc-machines",
       "collections": [
         "btc-machines"
@@ -4461,6 +4681,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "mnchrms",
       "collections": [
         "mnchrms"
@@ -4480,6 +4701,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cursedbitcoinpunks",
       "collections": [
         "cursedbitcoinpunks"
@@ -4499,6 +4721,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "unordinals",
       "collections": [
         "unordinals"
@@ -4527,6 +4750,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -4546,6 +4770,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "apes-on-bitcoin",
@@ -4567,6 +4792,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rebirth",
       "collections": [
         "rebirth"
@@ -4586,6 +4812,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 137,
@@ -4603,6 +4830,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -4622,6 +4850,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -4641,6 +4870,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordimouse",
       "collections": [
         "ordimouse"
@@ -4660,6 +4890,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "deadjira",
       "collections": [
         "deadjira"
@@ -4679,6 +4910,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -4698,6 +4930,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "xenknights",
       "collections": [
         "xenknights"
@@ -4717,6 +4950,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "qrpaper-bitcoin",
       "collections": [
         "qrpaper-bitcoin"
@@ -4736,6 +4970,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "anons",
       "collections": [
         "anons"
@@ -4759,6 +4994,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "bitcoinrocks",
       "collections": [
         "bitcoinrocks"
@@ -4778,6 +5014,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -4797,6 +5034,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -4816,6 +5054,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "unordinals",
       "collections": [
         "unordinals"
@@ -4835,6 +5074,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -4854,6 +5094,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pizza_artifacts",
       "collections": [
         "pizza_artifacts"
@@ -4873,6 +5114,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -4892,6 +5134,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -4911,6 +5154,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -4930,6 +5174,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "formation",
       "collections": [
         "formation"
@@ -4949,6 +5194,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -4970,6 +5216,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinals-x-gm-pfp",
       "collections": [
         "ordinals-x-gm-pfp"
@@ -4989,6 +5236,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -5008,6 +5256,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lil-bits",
       "collections": [
         "lil-bits"
@@ -5031,6 +5280,7 @@
       "reusedSides": [
         2
       ],
+      "chromeSides": [],
       "collection": "ordinal-shards",
       "collections": [
         "ordinal-shards"
@@ -5059,6 +5309,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -5076,6 +5327,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-bears",
       "collections": [
         "bitcoin-bears"
@@ -5095,6 +5347,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -5118,6 +5371,7 @@
       "reusedSides": [
         5
       ],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -5137,6 +5391,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -5156,6 +5411,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "oracles",
       "collections": [
         "oracles"
@@ -5175,6 +5431,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lilpeepos",
       "collections": [
         "lilpeepos"
@@ -5198,6 +5455,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -5223,6 +5481,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "abc-abracadabra",
@@ -5246,6 +5505,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "twelvefold",
       "collections": [
         "twelvefold"
@@ -5265,6 +5525,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -5284,6 +5545,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "zenon-core",
       "collections": [
         "zenon-core"
@@ -5308,6 +5570,7 @@
         1,
         2
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "abc-abracadabra",
@@ -5335,6 +5598,7 @@
       "reusedSides": [
         3
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitmap_78",
@@ -5362,6 +5626,7 @@
       "reusedSides": [
         5
       ],
+      "chromeSides": [],
       "collection": "diamonds",
       "collections": [
         "diamonds"
@@ -5387,6 +5652,7 @@
         2,
         3
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoin-frogs",
@@ -5418,6 +5684,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoin-frogs",
@@ -5442,6 +5709,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-tortoises",
       "collections": [
         "ordinal-tortoises"
@@ -5461,6 +5729,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "the-ordrothko-collection",
       "collections": [
         "the-ordrothko-collection"
@@ -5480,6 +5749,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "the-ordrothko-collection",
       "collections": [
         "the-ordrothko-collection"
@@ -5499,6 +5769,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "the-ordrothko-collection",
       "collections": [
         "the-ordrothko-collection"
@@ -5526,6 +5797,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -5545,6 +5817,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "the-ordrothko-collection",
       "collections": [
         "the-ordrothko-collection"
@@ -5564,6 +5837,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 170,
@@ -5581,6 +5855,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc-virus",
       "collections": [
         "btc-virus"
@@ -5600,6 +5875,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-boos",
       "collections": [
         "bitcoin-boos"
@@ -5619,6 +5895,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -5638,6 +5915,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -5657,6 +5935,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opunk",
       "collections": [
         "opunk"
@@ -5681,6 +5960,7 @@
         2,
         5
       ],
+      "chromeSides": [],
       "collection": "ordinal-fomojis",
       "collections": [
         "ordinal-fomojis"
@@ -5700,6 +5980,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "fomojis_2",
       "collections": [
         "fomojis_2"
@@ -5724,6 +6005,7 @@
         1,
         3
       ],
+      "chromeSides": [],
       "collection": "speculum-aeternum",
       "collections": [
         "speculum-aeternum"
@@ -5748,6 +6030,7 @@
         2,
         6
       ],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -5767,6 +6050,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "darkordinauts",
       "collections": [
         "darkordinauts"
@@ -5790,6 +6074,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "btc-machines",
       "collections": [
         "btc-machines"
@@ -5809,6 +6094,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoinshrooms",
       "collections": [
         "bitcoinshrooms"
@@ -5828,6 +6114,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "persona",
       "collections": [
         "persona"
@@ -5847,6 +6134,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "block9",
       "collections": [
         "block9"
@@ -5866,6 +6154,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinauts",
       "collections": [
         "ordinauts"
@@ -5894,6 +6183,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -5915,6 +6205,7 @@
         5
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordskull",
       "collections": [
         "ordskull"
@@ -5943,6 +6234,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -5964,6 +6256,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -5990,6 +6283,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoinrocks",
       "collections": [
         "bitcoinrocks"
@@ -6019,6 +6313,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -6036,6 +6331,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "yokai_avengers",
       "collections": [
         "yokai_avengers"
@@ -6065,6 +6361,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -6082,6 +6379,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "zenon-core",
       "collections": [
         "zenon-core"
@@ -6110,6 +6408,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -6127,6 +6426,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -6146,6 +6446,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "twelvefold",
       "collections": [
         "twelvefold"
@@ -6165,6 +6466,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "shitcoiners",
       "collections": [
         "shitcoiners"
@@ -6184,6 +6493,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -6203,6 +6513,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btcbabbies",
       "collections": [
         "btcbabbies"
@@ -6222,6 +6533,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitdisc_black_1",
       "collections": [
         "bitdisc_black_1"
@@ -6241,6 +6553,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -6260,6 +6573,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btcbabbies",
       "collections": [
         "btcbabbies"
@@ -6279,6 +6593,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 192,
@@ -6300,6 +6615,7 @@
         1
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoinshrooms",
       "collections": [
         "bitcoinshrooms"
@@ -6319,6 +6635,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -6338,6 +6655,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoinrocks",
       "collections": [
         "bitcoinrocks"
@@ -6357,6 +6675,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -6376,6 +6695,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "seizectrl",
       "collections": [
         "seizectrl"
@@ -6395,6 +6715,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "twelvefold",
       "collections": [
         "twelvefold"
@@ -6414,6 +6735,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bury",
       "collections": [
         "bury"
@@ -6433,6 +6755,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "libertas",
       "collections": [
         "libertas"
@@ -6452,6 +6782,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -6471,6 +6802,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rune-whisperers",
       "collections": [
         "rune-whisperers"
@@ -6490,6 +6822,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "unnamed",
       "collections": [
         "unnamed"
@@ -6516,6 +6849,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "runestone"
@@ -6535,6 +6869,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -6558,6 +6893,7 @@
       "reusedSides": [
         4
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "grails"
@@ -6577,6 +6913,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinalplague",
       "collections": [
         "ordinalplague"
@@ -6596,6 +6933,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -6615,6 +6953,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc_x_puppets",
       "collections": [
         "btc_x_puppets"
@@ -6634,6 +6973,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "wizards",
       "collections": [
         "wizards"
@@ -6653,6 +6993,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 208,
@@ -6670,6 +7011,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "wizards",
       "collections": [
         "wizards"
@@ -6689,6 +7031,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc-machines",
       "collections": [
         "btc-machines"
@@ -6718,6 +7061,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -6735,6 +7079,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lotion",
       "collections": [
         "lotion"
@@ -6754,6 +7099,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cc0",
       "collections": [
         "cc0"
@@ -6773,6 +7119,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -6792,6 +7139,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "honey_badgers",
       "collections": [
         "honey_badgers"
@@ -6811,6 +7159,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runerocks",
       "collections": [
         "runerocks"
@@ -6830,6 +7179,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pixelpepes",
       "collections": [
         "pixelpepes"
@@ -6849,6 +7199,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cc0",
       "collections": [
         "cc0"
@@ -6868,6 +7219,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "champions",
       "collections": [
         "champions"
@@ -6887,6 +7239,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -6906,6 +7259,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "driforianangels",
       "collections": [
         "driforianangels"
@@ -6925,6 +7279,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -6944,6 +7299,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitdisc_black_1",
       "collections": [
         "bitdisc_black_1"
@@ -6963,6 +7319,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lilpeepos",
       "collections": [
         "lilpeepos"
@@ -6982,6 +7339,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "seizectrl",
       "collections": [
         "seizectrl"
@@ -7001,6 +7359,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lotion",
       "collections": [
         "lotion"
@@ -7020,6 +7379,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -7039,6 +7399,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lotion",
       "collections": [
         "lotion"
@@ -7058,6 +7419,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bury",
       "collections": [
         "bury"
@@ -7077,6 +7439,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -7096,6 +7459,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -7115,6 +7479,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -7134,6 +7499,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -7153,6 +7519,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cpnks",
       "collections": [
         "cpnks"
@@ -7172,6 +7539,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -7191,6 +7559,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -7210,6 +7579,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cpnks",
       "collections": [
         "cpnks"
@@ -7229,6 +7599,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -7248,6 +7619,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -7267,6 +7639,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "gamestone",
       "collections": [
         "gamestone"
@@ -7286,6 +7659,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -7305,6 +7679,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -7330,6 +7705,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -7349,6 +7725,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runerocks",
       "collections": [
         "runerocks"
@@ -7368,6 +7745,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "frank",
       "collections": [
         "frank"
@@ -7387,6 +7765,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "seizectrl",
       "collections": [
         "seizectrl"
@@ -7413,6 +7792,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "boottalion",
       "collections": [
         "boottalion"
@@ -7440,6 +7820,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -7459,6 +7840,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "driforianangels",
       "collections": [
         "driforianangels"
@@ -7485,6 +7867,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -7508,6 +7891,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -7527,6 +7911,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "fuzzyfox",
       "collections": [
         "fuzzyfox"
@@ -7546,6 +7931,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "abc-abracadabra",
       "collections": [
         "abc-abracadabra"
@@ -7565,6 +7951,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "noderocks",
       "collections": [
         "noderocks"
@@ -7584,6 +7971,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "lilpeepos",
       "collections": [
         "lilpeepos"
@@ -7607,6 +7995,7 @@
       "reusedSides": [
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -7630,6 +8019,7 @@
       "reusedSides": [
         5
       ],
+      "chromeSides": [],
       "collection": "abc-abracadabra",
       "collections": [
         "abc-abracadabra"
@@ -7649,6 +8039,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -7672,6 +8063,7 @@
       "reusedSides": [
         2
       ],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -7691,6 +8083,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pepenals",
       "collections": [
         "pepenals"
@@ -7710,6 +8103,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitdisc_black_1",
       "collections": [
         "bitdisc_black_1"
@@ -7729,6 +8123,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoinshrooms",
       "collections": [
         "bitcoinshrooms"
@@ -7748,6 +8143,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pixelpepes",
       "collections": [
         "pixelpepes"
@@ -7767,6 +8163,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "dimes",
       "collections": [
         "dimes"
@@ -7788,6 +8185,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "decimals",
@@ -7808,6 +8206,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -7827,6 +8226,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -7846,6 +8246,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cc0",
       "collections": [
         "cc0"
@@ -7865,6 +8266,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -7884,6 +8286,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "shids",
       "collections": [
         "shids"
@@ -7903,6 +8306,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runepunks",
       "collections": [
         "runepunks"
@@ -7928,6 +8332,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -7947,6 +8352,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "frank",
       "collections": [
         "frank"
@@ -7966,6 +8372,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -7985,6 +8392,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "le_puppettes",
       "collections": [
         "le_puppettes"
@@ -8004,6 +8412,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "champions",
       "collections": [
         "champions"
@@ -8023,6 +8432,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "wizards",
       "collections": [
         "wizards"
@@ -8042,6 +8452,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "aog-orange",
       "collections": [
         "aog-orange"
@@ -8061,6 +8472,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal_geese",
       "collections": [
         "ordinal_geese"
@@ -8080,6 +8492,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "shids",
       "collections": [
         "shids"
@@ -8099,6 +8512,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -8118,6 +8532,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cpnks",
       "collections": [
         "cpnks"
@@ -8137,6 +8552,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "glowies",
       "collections": [
         "glowies"
@@ -8156,6 +8572,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "artifacts",
       "collections": [
         "artifacts"
@@ -8177,6 +8594,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -8196,6 +8614,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runepunks",
       "collections": [
         "runepunks"
@@ -8215,6 +8634,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pixelpepes",
       "collections": [
         "pixelpepes"
@@ -8244,6 +8664,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "theblockcollection",
       "collections": [
         "theblockcollection"
@@ -8265,6 +8686,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -8289,6 +8711,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -8308,6 +8731,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -8327,6 +8751,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "wizards",
       "collections": [
         "wizards"
@@ -8346,6 +8771,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -8369,6 +8795,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "cc0",
       "collections": [
         "cc0"
@@ -8392,6 +8819,7 @@
       "reusedSides": [
         6
       ],
+      "chromeSides": [],
       "collection": "aog-orange",
       "collections": [
         "aog-orange"
@@ -8411,6 +8839,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodeapes",
       "collections": [
         "nodeapes"
@@ -8430,6 +8859,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -8451,6 +8881,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoinshrooms",
       "collections": [
         "bitcoinshrooms"
@@ -8470,6 +8901,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -8489,6 +8921,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -8513,6 +8946,7 @@
         3,
         4
       ],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -8532,6 +8966,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "bitglyphs",
       "collections": [
         "bitglyphs"
@@ -8551,6 +8993,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -8570,6 +9013,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -8589,6 +9033,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -8614,6 +9059,7 @@
         2,
         3
       ],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -8637,6 +9083,7 @@
       "reusedSides": [
         3
       ],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -8656,6 +9103,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 287,
@@ -8680,6 +9128,7 @@
         3,
         5
       ],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -8707,6 +9156,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -8726,6 +9176,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rune-whisperers",
       "collections": [
         "rune-whisperers"
@@ -8745,6 +9196,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "megapunks",
       "collections": [
         "megapunks"
@@ -8768,6 +9220,7 @@
       "reusedSides": [
         4
       ],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -8787,6 +9240,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -8806,6 +9260,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -8829,6 +9284,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -8848,6 +9304,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -8867,6 +9324,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -8891,6 +9349,7 @@
         1,
         6
       ],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -8916,6 +9375,7 @@
         2,
         4
       ],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -8935,6 +9395,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 294,
@@ -8952,6 +9413,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -8971,6 +9433,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "noderocks",
       "collections": [
         "noderocks"
@@ -8990,6 +9453,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -9009,6 +9473,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -9028,6 +9493,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc-machines",
       "collections": [
         "btc-machines"
@@ -9047,6 +9513,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "seizectrl",
       "collections": [
         "seizectrl"
@@ -9066,6 +9533,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pixogette",
       "collections": [
         "pixogette"
@@ -9085,6 +9553,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cents",
       "collections": [
         "cents"
@@ -9104,6 +9573,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "boneys",
       "collections": [
         "boneys"
@@ -9123,6 +9593,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btc_x_puppets",
       "collections": [
         "btc_x_puppets"
@@ -9142,6 +9613,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9166,6 +9638,7 @@
         1,
         6
       ],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9185,6 +9658,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -9204,6 +9678,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cpnks",
       "collections": [
         "cpnks"
@@ -9223,6 +9698,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9242,6 +9718,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -9261,6 +9738,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -9282,6 +9760,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -9299,6 +9778,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "btcphantoms",
       "collections": [
         "btcphantoms"
@@ -9318,6 +9798,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodeapes",
       "collections": [
         "nodeapes"
@@ -9337,6 +9818,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pixelpepes",
       "collections": [
         "pixelpepes"
@@ -9356,6 +9838,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "nodeapes"
@@ -9381,6 +9864,7 @@
         2,
         4
       ],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9400,6 +9884,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rune_pizza",
       "collections": [
         "rune_pizza"
@@ -9419,6 +9904,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoin-puppets",
@@ -9443,6 +9929,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "skullx-cyber-raiders",
       "collections": [
         "skullx-cyber-raiders"
@@ -9462,6 +9949,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -9481,6 +9969,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -9500,6 +9989,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rune_pizza",
       "collections": [
         "rune_pizza"
@@ -9519,6 +10009,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9538,6 +10029,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "unnamed",
       "collections": [
         "unnamed"
@@ -9566,6 +10058,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -9592,6 +10085,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9611,6 +10105,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -9637,6 +10132,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -9662,6 +10158,7 @@
         3,
         6
       ],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -9681,6 +10178,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-penguins",
       "collections": [
         "ordinal-penguins"
@@ -9700,6 +10198,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -9719,6 +10218,14 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
       "collection": "blifstone",
       "collections": [
         "blifstone"
@@ -9738,6 +10245,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "mnchrms",
       "collections": [
         "mnchrms"
@@ -9757,6 +10265,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -9776,6 +10285,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -9795,6 +10305,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -9819,6 +10330,7 @@
         2,
         5
       ],
+      "chromeSides": [],
       "collection": "vgp",
       "collections": [
         "vgp"
@@ -9838,6 +10350,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -9857,6 +10370,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -9876,6 +10390,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "mnchrms",
       "collections": [
         "mnchrms"
@@ -9895,6 +10410,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "patoshipunks",
       "collections": [
         "patoshipunks"
@@ -9922,6 +10438,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -9941,6 +10458,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "death_runesr3",
@@ -9964,6 +10482,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -9983,6 +10502,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -10002,6 +10522,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "aog-orange",
       "collections": [
         "aog-orange"
@@ -10021,6 +10542,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -10040,6 +10562,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "x_monkes",
       "collections": [
         "x_monkes"
@@ -10063,6 +10586,7 @@
       "reusedSides": [
         2
       ],
+      "chromeSides": [],
       "collection": "runes_pups",
       "collections": [
         "runes_pups"
@@ -10082,6 +10606,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "rune_pizza",
       "collections": [
         "rune_pizza"
@@ -10101,6 +10626,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "mnchrms",
       "collections": [
         "mnchrms"
@@ -10120,6 +10646,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "berlin-by-lemonhaze",
       "collections": [
         "berlin-by-lemonhaze"
@@ -10139,6 +10666,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -10158,6 +10686,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cpnks",
       "collections": [
         "cpnks"
@@ -10177,6 +10706,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitmap_emporium",
       "collections": [
         "bitmap_emporium"
@@ -10196,6 +10726,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -10215,6 +10746,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -10234,6 +10766,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -10253,6 +10786,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "maxis",
       "collections": [
         "maxis"
@@ -10272,6 +10806,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "birdybites",
@@ -10293,6 +10828,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "astral-babes",
       "collections": [
         "astral-babes"
@@ -10318,6 +10854,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "fomojis_2",
       "collections": [
         "fomojis_2"
@@ -10337,6 +10874,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -10362,6 +10900,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoin-punks",
@@ -10390,6 +10929,7 @@
         1,
         2
       ],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -10409,6 +10949,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "mnchrms",
       "collections": [
         "mnchrms"
@@ -10428,6 +10969,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cypherville",
       "collections": [
         "cypherville"
@@ -10447,6 +10989,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -10466,6 +11009,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "mnchrms",
       "collections": [
         "mnchrms"
@@ -10489,6 +11033,7 @@
       "reusedSides": [
         1
       ],
+      "chromeSides": [],
       "collection": "bitmap_emporium",
       "collections": [
         "bitmap_emporium"
@@ -10508,6 +11053,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-frogs",
       "collections": [
         "bitcoin-frogs"
@@ -10531,6 +11077,7 @@
       "reusedSides": [
         2
       ],
+      "chromeSides": [],
       "collection": "btc-machines",
       "collections": [
         "btc-machines"
@@ -10550,6 +11097,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -10569,6 +11117,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 360,
@@ -10588,6 +11137,10 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [
+        3,
+        6
+      ],
       "collection": null,
       "collections": [
         "blifstone"
@@ -10607,6 +11160,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 361,
@@ -10624,6 +11178,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 362,
@@ -10641,6 +11196,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 363,
@@ -10658,6 +11214,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 364,
@@ -10679,6 +11236,7 @@
       "reusedSides": [
         4
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -10696,6 +11254,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 365,
@@ -10720,6 +11279,7 @@
         4,
         5
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -10737,6 +11297,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -10756,6 +11317,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "pip",
       "collections": [
         "pip"
@@ -10781,6 +11343,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "remnantsofadistantsupernova",
@@ -10801,6 +11364,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "uncommonpatterns",
       "collections": [
         "uncommonpatterns"
@@ -10820,6 +11384,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 369,
@@ -10839,6 +11404,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -10856,6 +11422,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "shids",
       "collections": [
         "shids"
@@ -10875,6 +11442,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [],
       "validOrdinal": 371,
@@ -10900,6 +11468,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -10919,6 +11488,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "patoshipunks",
       "collections": [
         "patoshipunks"
@@ -10938,6 +11508,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "patoshipunks",
       "collections": [
         "patoshipunks"
@@ -10966,6 +11537,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "wzrds",
       "collections": [
         "wzrds"
@@ -10987,6 +11559,7 @@
       ],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "og-satoshis",
       "collections": [
         "og-satoshis"
@@ -11006,6 +11579,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-wizards",
       "collections": [
         "bitcoin-wizards"
@@ -11033,6 +11607,9 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [
+        1
+      ],
       "collection": null,
       "collections": [
         "goosinals_"
@@ -11052,6 +11629,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "sats",
       "collections": [
         "sats"
@@ -11071,6 +11649,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "fake-rares",
       "collections": [
         "fake-rares"
@@ -11090,6 +11669,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "world_peace_cards",
       "collections": [
         "world_peace_cards"
@@ -11109,6 +11689,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "nodemonkes",
       "collections": [
         "nodemonkes"
@@ -11128,6 +11709,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cents",
       "collections": [
         "cents"
@@ -11153,6 +11735,7 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "fomojis_2",
       "collections": [
         "fomojis_2"
@@ -11172,6 +11755,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -11191,6 +11775,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinalrugs",
       "collections": [
         "ordinalrugs"
@@ -11210,6 +11795,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "opium",
       "collections": [
         "opium"
@@ -11229,6 +11815,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-toadz",
       "collections": [
         "bitcoin-toadz"
@@ -11248,6 +11835,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -11267,6 +11855,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal-mimi",
       "collections": [
         "ordinal-mimi"
@@ -11286,6 +11875,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-punks",
       "collections": [
         "bitcoin-punks"
@@ -11305,6 +11895,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "wizards",
       "collections": [
         "wizards"
@@ -11324,6 +11915,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "shids",
       "collections": [
         "shids"
@@ -11343,6 +11935,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "omb",
       "collections": [
         "omb"
@@ -11362,6 +11955,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "theones",
       "collections": [
         "theones"
@@ -11381,6 +11975,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "dimes",
       "collections": [
         "dimes"
@@ -11400,6 +11995,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "theones",
       "collections": [
         "theones"
@@ -11419,6 +12015,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "tfl",
       "collections": [
         "tfl"
@@ -11438,6 +12035,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "proof_of_vandal"
@@ -11465,6 +12063,7 @@
       "reusedSides": [
         4
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "bitcoin-puppets",
@@ -11489,6 +12088,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "theones",
       "collections": [
         "theones"
@@ -11508,6 +12108,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "goosinals",
       "collections": [
         "goosinals"
@@ -11533,6 +12134,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "proof_of_vandal"
@@ -11556,6 +12158,9 @@
       "reusedSides": [
         6
       ],
+      "chromeSides": [
+        3
+      ],
       "collection": "stamp",
       "collections": [
         "stamp"
@@ -11575,6 +12180,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "umwelt",
       "collections": [
         "umwelt"
@@ -11594,6 +12200,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "degods",
       "collections": [
         "degods"
@@ -11613,6 +12220,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "cents",
       "collections": [
         "cents"
@@ -11637,6 +12245,7 @@
         2
       ],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "ailu",
@@ -11661,6 +12270,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "bitcoin-puppets",
       "collections": [
         "bitcoin-puppets"
@@ -11680,6 +12290,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "punkroyale",
       "collections": [
         "punkroyale"
@@ -11707,6 +12318,9 @@
         6
       ],
       "reusedSides": [],
+      "chromeSides": [
+        1
+      ],
       "collection": null,
       "collections": [],
       "validOrdinal": null,
@@ -11724,6 +12338,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": "ordinal_pop",
       "collections": [
         "ordinal_pop"
@@ -11743,6 +12358,7 @@
       "cursed": [],
       "blackSides": [],
       "reusedSides": [],
+      "chromeSides": [],
       "collection": null,
       "collections": [
         "omb"
@@ -11771,6 +12387,7 @@
         5,
         6
       ],
+      "chromeSides": [],
       "collection": "boneys",
       "collections": [
         "boneys"

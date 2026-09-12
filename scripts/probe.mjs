@@ -142,6 +142,10 @@ async function runChrome(chrome, html) {
     const args = [
       '--headless=new',
       '--disable-gpu',
+      // Without it a headless Chrome has no WebGL at all (measured: both
+      // contexts null), and the texture fact would stay unknown for every
+      // side. With it the software renderer answers.
+      '--enable-unsafe-swiftshader',
       '--disable-extensions',
       '--no-first-run',
       '--no-default-browser-check',

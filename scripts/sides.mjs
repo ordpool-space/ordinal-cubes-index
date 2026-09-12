@@ -40,6 +40,8 @@ export const SIDES_PATH = path.resolve(__dirname, '..', 'data', 'sides.json');
 
 export const CONTENT_BASE = process.env.CONTENT_BASE || 'https://api.ordpool.space';
 const HEAD_CONCURRENCY = Number(process.env.HEAD_CONCURRENCY ?? 4);
+/** How many unresolved `texture` facts one run tries to fill. */
+const TEXTURE_TOPUP_MAX = Number(process.env.TEXTURE_TOPUP_MAX ?? 400);
 const UA = 'ordinal-cubes-index/1.0 (https://github.com/ordpool-space/ordinal-cubes-index)';
 
 const SIDE_TRAITS = ['Side 1', 'Side 2', 'Side 3', 'Side 4', 'Side 5', 'Side 6'];
@@ -132,12 +134,19 @@ async function probeTwice(ids, log) {
 }
 
 /**
- * Fills the `texture` fact on entries resolved before it existed. Only the
- * image probe runs; the entry's other facts are kept.
+ * Fills the `texture` fact on entries that do not carry it yet, and retries
+ * the ones where it could not be established (a browser without WebGL, a
+ * failed CORS load). Only the image probe runs; the entry's other facts are
+ * kept. Capped per run so a fact that can never be established does not make
+ * every run pay for all of them.
  */
 async function topUpTexture(ids, sides, log) {
-  const todo = ids.filter((id) => sides[id] && sides[id].texture === undefined && INSCRIPTION_ID.test(id));
-  const malformed = ids.filter((id) => sides[id] && sides[id].texture === undefined && !INSCRIPTION_ID.test(id));
+  // A side that does not render has nothing to texture; its `null` is the
+  // final answer, not an open question, and must not be retried every run.
+  const open = (id) =>
+    sides[id] && sides[id].renderable && (sides[id].texture === undefined || sides[id].texture === null);
+  const todo = ids.filter((id) => open(id) && INSCRIPTION_ID.test(id)).slice(0, TEXTURE_TOPUP_MAX);
+  const malformed = ids.filter((id) => open(id) && !INSCRIPTION_ID.test(id));
   for (const id of malformed) sides[id].texture = null;
   if (todo.length === 0) return malformed.length;
   log(`sides: filling the texture fact on ${todo.length} entr${todo.length === 1 ? 'y' : 'ies'}`);
