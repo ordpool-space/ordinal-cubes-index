@@ -55,11 +55,14 @@ Three different versions have been released so far, each with minor bug fixes an
   "renderable": true,
   "width": 600,
   "height": 600,
+  "texture": true,
   "collection": "bitcoinonezero"
 }
 ```
 
-`renderable` is what the cube renderer sees: it loads every side as an `<img>` (three.js `TextureLoader`), so a face is black exactly when the browser cannot decode the side as an image. The probe asks headless Chrome that same question. `collection` is the Magic Eden symbol from the [archive's reverse index](https://github.com/ordpool-space/magic-eden-ordinals-archive#by-idprefixcsvgz-reverse-index), `null` when the archive does not know the inscription.
+`renderable` is what the cube renderer sees: it loads every side as an `<img>` (three.js `TextureLoader`), so a face is black exactly when the browser cannot decode the side as an image. The probe asks headless Chrome that same question.
+
+`texture` is the second half of that question: does the browser accept the decoded image as a WebGL texture source? An SVG **without an intrinsic size** (`width="100%"` and no height, or only a `viewBox`) decodes as an image but is refused, and the upload fails with `INVALID_VALUE` ("bad image data"). Cubes built from such sides rendered when they were minted and went black later, in every viewer that hands the image to WebGL unchanged, including ordinals.com's own `/preview/`. [cubes.haushoppe.art](https://cubes.haushoppe.art) rasterises them back into view, so there they still show. `null` means the fact was not established. `collection` is the Magic Eden symbol from the [archive's reverse index](https://github.com/ordpool-space/magic-eden-ordinals-archive#by-idprefixcsvgz-reverse-index), `null` when the archive does not know the inscription.
 
 `data/rarity.json` is the score over all cubes (see [Rarity](#rarity)): the rules it was computed with, the collection table, and one row per cube in canonical order:
 
@@ -71,6 +74,7 @@ Three different versions have been released so far, each with minor bug fixes an
   "cursed": [],                  // duplicate-side | black-side | reused-inscription
   "blackSides": [],              // 1-based faces that do not render
   "reusedSides": [],             // 1-based faces claimed by an earlier cube
+  "chromeSides": [],             // 1-based faces the browser refuses to texture
   "collection": "omb",           // all six sides from this collection, else null
   "collections": ["omb"],        // every collection the cube shows
   "validOrdinal": 11,            // position among scored cubes, in mint order
@@ -131,6 +135,8 @@ Every cube in `cubes.json` has a row in `rarity.json`, and every row is one of `
 The popularity of a collection is the number of scored cubes that show at least one side from it. A cube whose six sides all come from one collection earns popularity points: 100 × its collection's popularity ÷ the popularity of the most popular collection, rounded. Mixed cubes and cubes from collections the archive does not know earn none. Both axes top out at 100: the first hundred cubes keep their head start, and a late cube can still climb past everything below them by choosing its collection well.
 
 **Rank** orders scored cubes by score, highest first; on a tie the older cube wins (same mint order as above), so ranks are a strict 1 to n.
+
+**`chromeSides` is not a curse and costs no points.** It names the faces whose side the browser refuses as a texture source (see `texture` above). Those cubes rendered when they were minted, and cubes.haushoppe.art renders them still, so nothing about the cube is wrong; the field exists so a viewer can say what happened. The site labels them *Cursed | Chrome f*cked us*.
 
 Collections come from the frozen [Magic Eden archive](https://github.com/ordpool-space/magic-eden-ordinals-archive), the same source the mint page draws its suggestions from. Further sources can be added later at one place (`scripts/collections.mjs`).
 

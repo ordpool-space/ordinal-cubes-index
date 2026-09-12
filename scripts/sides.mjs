@@ -8,8 +8,15 @@
 //     "exists": true,               // /content/<id> answers 200
 //     "renderable": true,           // decodes as an image in Chrome (probe.mjs)
 //     "width": 600, "height": 600,  // decoded size, 0 when not renderable
+//     "texture": true,              // the browser takes it as a WebGL texture
 //     "collection": "omb"           // Magic Eden symbol, null when unknown
 //   }
+//
+// `texture: false` is the side that decodes but is refused as a texture source
+// (an SVG without an intrinsic size). Those faces went black in every viewer
+// after Chrome tightened this, although the cubes rendered when they were
+// minted; cubes.haushoppe.art rasterises them back into view. `null` means the
+// fact was not established.
 //
 // `renderable` is the fact the score needs: a cube face is black exactly
 // when its side is not renderable. Content type and bytes come from our
@@ -76,6 +83,7 @@ const UNREACHABLE = Object.freeze({
   renderable: false,
   width: 0,
   height: 0,
+  texture: null,
   collection: null,
 });
 
@@ -124,21 +132,41 @@ async function probeTwice(ids, log) {
 }
 
 /**
+ * Fills the `texture` fact on entries resolved before it existed. Only the
+ * image probe runs; the entry's other facts are kept.
+ */
+async function topUpTexture(ids, sides, log) {
+  const todo = ids.filter((id) => sides[id] && sides[id].texture === undefined && INSCRIPTION_ID.test(id));
+  const malformed = ids.filter((id) => sides[id] && sides[id].texture === undefined && !INSCRIPTION_ID.test(id));
+  for (const id of malformed) sides[id].texture = null;
+  if (todo.length === 0) return malformed.length;
+  log(`sides: filling the texture fact on ${todo.length} entr${todo.length === 1 ? 'y' : 'ies'}`);
+  const probed = await probeImages(todo, { base: CONTENT_BASE, log });
+  let filled = malformed.length;
+  for (const id of todo) {
+    if (probed[id]) { sides[id].texture = probed[id].texture; filled++; }
+  }
+  return filled;
+}
+
+/**
  * Resolves every side id that has no entry yet and adds it to `sides`
  * (mutated in place). Returns `{ resolved, unsettled }`: ids whose image
  * probe did not settle are left out, so the caller can keep the progress
  * and retry them on a later run.
  */
 export async function ensureSides(cubes, sides, { log = console.log } = {}) {
-  const missing = [...collectSideIds(cubes)].filter((id) => !sides[id]);
-  if (missing.length === 0) return { resolved: 0, unsettled: 0 };
+  const all = [...collectSideIds(cubes)];
+  const toppedUp = await topUpTexture(all, sides, log);
+  const missing = all.filter((id) => !sides[id]);
+  if (missing.length === 0) return { resolved: toppedUp, unsettled: 0 };
 
   const malformed = missing.filter((id) => !INSCRIPTION_ID.test(id));
   for (const id of malformed) sides[id] = { ...UNREACHABLE };
 
   const toResolve = missing.filter((id) => INSCRIPTION_ID.test(id));
   log(`sides: ${missing.length} unresolved (${malformed.length} malformed ids recorded directly)`);
-  if (toResolve.length === 0) return { resolved: malformed.length, unsettled: 0 };
+  if (toResolve.length === 0) return { resolved: toppedUp + malformed.length, unsettled: 0 };
 
   const meta = await headAll(toResolve);
   const probed = await probeTwice(toResolve, log);
@@ -153,11 +181,12 @@ export async function ensureSides(cubes, sides, { log = console.log } = {}) {
       renderable: image.renderable,
       width: image.width,
       height: image.height,
+      texture: image.texture,
       collection: collections.get(id) ?? null,
     };
     resolved++;
   }
   const unsettled = toResolve.length - resolved;
   log(`sides: ${resolved} resolved, ${unsettled} left for a later run`);
-  return { resolved: malformed.length + resolved, unsettled };
+  return { resolved: toppedUp + malformed.length + resolved, unsettled };
 }

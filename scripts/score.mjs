@@ -58,6 +58,7 @@ export function computeRarity(cubes, sides, rules = RULES) {
     const cursed = [];
     const blackSides = [];
     const reusedSides = [];
+    const chromeSides = [];
 
     if (ids.length !== FACE_COUNT || new Set(ids).size !== FACE_COUNT) cursed.push('duplicate-side');
     ids.forEach((id, index) => {
@@ -66,6 +67,10 @@ export function computeRarity(cubes, sides, rules = RULES) {
       // a hand-edited file, never a state to publish.
       if (!side) throw new Error(`side ${id} of cube ${cube.inscriptionId} has no entry in sides.json`);
       if (!side.renderable) blackSides.push(index + 1);
+      // Decodes, but the browser refuses it as a texture source: this face
+      // rendered when the cube was minted and goes black in a viewer that
+      // hands it to WebGL unchanged.
+      if (side.renderable && side.texture === false) chromeSides.push(index + 1);
       if (claimed.has(id)) reusedSides.push(index + 1);
     });
     if (blackSides.length > 0) cursed.push('black-side');
@@ -83,6 +88,7 @@ export function computeRarity(cubes, sides, rules = RULES) {
       cursed,
       blackSides,
       reusedSides,
+      chromeSides,
       collection,
       collections,
       validOrdinal: null,
@@ -148,6 +154,8 @@ export function computeRarity(cubes, sides, rules = RULES) {
     scoredCubes: count('scored'),
     cursedCubes: count('cursed'),
     afterCloseCubes: count('after-close'),
+    /** Cubes with at least one face the browser refuses as a texture. */
+    chromeCubes: rows.filter((row) => row.chromeSides.length > 0).length,
     collections,
     cubes: rows,
   };

@@ -36,7 +36,7 @@ function sixSides(label) {
 function sidesFor(assignments) {
   const sides = {};
   for (const [sideId, spec] of Object.entries(assignments)) {
-    sides[sideId] = { contentType: 'image/png', exists: true, renderable: true, width: 1, height: 1, collection: null, ...spec };
+    sides[sideId] = { contentType: 'image/png', exists: true, renderable: true, width: 1, height: 1, texture: true, collection: null, ...spec };
   }
   return sides;
 }
@@ -120,6 +120,37 @@ test('a side without a resolved entry is an error, never a published status', ()
   const sides = sidesFor(image(s, 'omb'));
   delete sides[s[3]];
   assert.throws(() => computeRarity([cube(s)], sides), new RegExp(`side ${s[3]} of cube .* has no entry`));
+});
+
+test('names the faces the browser refuses as a texture, without cursing the cube for them', () => {
+  const s = sixSides('a');
+  const sides = sidesFor(image(s, 'omb'));
+  sides[s[1]].texture = false;
+  sides[s[4]].texture = false;
+  const result = computeRarity([cube(s)], sides);
+  assert.deepEqual(result.cubes[0].chromeSides, [2, 5]);
+  // The cube still renders (rasterised), so it keeps its score.
+  assert.equal(result.cubes[0].status, 'scored');
+  assert.deepEqual(result.cubes[0].cursed, []);
+  assert.equal(result.chromeCubes, 1);
+});
+
+test('a side whose texture fact is unknown is not reported as refused', () => {
+  const s = sixSides('a');
+  const sides = sidesFor(image(s, 'omb'));
+  sides[s[0]].texture = null;
+  const result = computeRarity([cube(s)], sides);
+  assert.deepEqual(result.cubes[0].chromeSides, []);
+  assert.equal(result.chromeCubes, 0);
+});
+
+test('a face that does not render at all is black, not a texture refusal', () => {
+  const s = sixSides('a');
+  const sides = sidesFor(image(s, 'omb'));
+  sides[s[2]] = { ...sides[s[2]], renderable: false, texture: false };
+  const result = computeRarity([cube(s)], sides);
+  assert.deepEqual(result.cubes[0].blackSides, [3]);
+  assert.deepEqual(result.cubes[0].chromeSides, []);
 });
 
 test('collection: all six sides from one collection, otherwise null', () => {

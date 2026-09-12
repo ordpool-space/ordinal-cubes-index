@@ -27,12 +27,24 @@ test('buildProbeHtml embeds the ids and base and cannot be broken out of with a 
 });
 
 test('parseProbeOutput maps load with a size to renderable and error to not renderable', () => {
-  const dom = `<html><head></head><body><pre id="r">[{"id":"a","ev":"load","w":150,"h":150},{"id":"b","ev":"error","w":0,"h":0},{"id":"c","ev":"load","w":0,"h":0}]</pre></body></html>`;
+  const dom = `<html><head></head><body><pre id="r">[{"id":"a","ev":"load","w":150,"h":150,"tex":true},{"id":"b","ev":"error","w":0,"h":0,"tex":null},{"id":"c","ev":"load","w":0,"h":0,"tex":null}]</pre></body></html>`;
   assert.deepEqual(parseProbeOutput(dom), {
-    a: { renderable: true, width: 150, height: 150 },
-    b: { renderable: false, width: 0, height: 0 },
-    c: { renderable: false, width: 0, height: 0 },
+    a: { renderable: true, width: 150, height: 150, texture: true },
+    b: { renderable: false, width: 0, height: 0, texture: null },
+    c: { renderable: false, width: 0, height: 0, texture: null },
   });
+});
+
+test('parseProbeOutput keeps the texture fact apart from decoding', () => {
+  // The Chrome case: the image decodes, but the browser refuses it as a
+  // texture source, so the face renders only where it is rasterised.
+  const dom = `<html><body><pre id="r">[{"id":"svg","ev":"load","w":203,"h":150,"tex":false}]</pre></body></html>`;
+  assert.deepEqual(parseProbeOutput(dom), { svg: { renderable: true, width: 203, height: 150, texture: false } });
+});
+
+test('parseProbeOutput records an unknown texture fact as null, never as a refusal', () => {
+  const dom = `<html><body><pre id="r">[{"id":"x","ev":"load","w":10,"h":10}]</pre></body></html>`;
+  assert.equal(parseProbeOutput(dom).x.texture, null);
 });
 
 test('parseProbeOutput reports an unsettled batch as null instead of guessing', () => {

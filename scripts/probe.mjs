@@ -52,32 +52,66 @@ export function findChrome() {
   throw new Error('No Chrome or Chromium binary found; set CHROME_BIN');
 }
 
-/** The probe page for one batch. Ids are pattern-checked by the caller; `<` is escaped anyway. */
+/**
+ * The probe page for one batch. Ids are pattern-checked by the caller; `<` is
+ * escaped anyway.
+ *
+ * Two facts per id:
+ *
+ * - `ev` / `w` / `h`: does the browser decode it as an image at all? A side
+ *   that does not is a black face for everyone.
+ * - `tex`: does the browser accept that image as a WebGL texture source the
+ *   way the cube renderer hands it over? An SVG without an intrinsic size
+ *   decodes but is refused (`INVALID_VALUE`), which is why such cubes went
+ *   black in every viewer; cubes.haushoppe.art rasterises them back into view.
+ *   The upload needs an origin-clean image, so it runs on a second, CORS
+ *   request; if that one fails the fact is simply unknown (`null`) and no
+ *   claim is made.
+ */
 export function buildProbeHtml(ids, base) {
   const json = JSON.stringify({ ids, base }).replace(/</g, '\\u003c');
   return `<!doctype html><meta charset="utf-8"><pre id="r"></pre>
 <script>
 const { ids, base } = ${json};
-const out = [];
-let pending = ids.length;
-const finish = () => { document.getElementById('r').textContent = JSON.stringify(out); };
-if (pending === 0) finish();
-for (const id of ids) {
-  const img = new Image();
-  const done = (ev) => {
-    out.push({ id, ev, w: img.naturalWidth, h: img.naturalHeight });
-    if (--pending === 0) finish();
-  };
-  img.onload = () => done('load');
-  img.onerror = () => done('error');
-  img.src = base + '/content/' + id;
+const canvas = document.createElement('canvas');
+const gl = canvas.getContext('webgl2') || canvas.getContext('webgl');
+function uploads(img) {
+  if (!gl) return null;
+  const tex = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, tex);
+  while (gl.getError() !== gl.NO_ERROR) {}
+  try { gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img); }
+  catch (e) { gl.deleteTexture(tex); return null; }
+  const err = gl.getError();
+  gl.deleteTexture(tex);
+  return err === gl.NO_ERROR;
 }
+function load(url, cors) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    if (cors) img.crossOrigin = 'anonymous';
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = url;
+  });
+}
+(async () => {
+  const out = [];
+  for (const id of ids) {
+    const url = base + '/content/' + id;
+    const img = await load(url, false);
+    if (!img) { out.push({ id, ev: 'error', w: 0, h: 0, tex: null }); continue; }
+    const clean = await load(url, true);
+    out.push({ id, ev: 'load', w: img.naturalWidth, h: img.naturalHeight, tex: clean ? uploads(clean) : null });
+  }
+  document.getElementById('r').textContent = JSON.stringify(out);
+})();
 </script>
 `;
 }
 
 /**
- * Parses `--dump-dom` output into `{ id → { renderable, width, height } }`.
+ * Parses `--dump-dom` output into `{ id → { renderable, width, height, texture } }`.
  * An empty <pre> means not every image had settled inside the time budget;
  * the batch is reported incomplete so the caller leaves those ids unprobed
  * and a later run retries them, instead of recording a wrong answer.
@@ -92,6 +126,9 @@ export function parseProbeOutput(dom) {
       renderable: entry.ev === 'load' && entry.w > 0 && entry.h > 0,
       width: entry.w,
       height: entry.h,
+      // true: the browser takes it as a texture. false: it is refused and only
+      // renders because we rasterise it. null: not established.
+      texture: entry.tex === undefined ? null : entry.tex,
     };
   }
   return result;
