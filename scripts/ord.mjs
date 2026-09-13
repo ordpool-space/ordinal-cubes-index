@@ -1,11 +1,11 @@
 // Minimal client for our own ord instance (https://ord.ordpool.space).
 // JSON API is enabled. No auth, no rate limit (it's ours).
 //
-// Retry policy: network errors, 5xx, AND 404 — the last one because
-// ord.ordpool.space scrapes ordinals.com, so a transient upstream
-// hiccup surfaces here as a temporary 404 that resolves within
-// seconds. All other non-2xx statuses (403, 429, …) throw immediately
-// with no retry.
+// Retry policy: network errors, 5xx, AND 404. The 404 is deliberate: a
+// transient upstream hiccup can surface as a short-lived 404 that
+// resolves within seconds, so one 404 is not proof the inscription is
+// gone. All other non-2xx statuses (403, 429, …) throw immediately with
+// no retry.
 
 export const ORD_BASE = process.env.ORD_BASE || 'https://ord.ordpool.space';
 
@@ -90,7 +90,13 @@ export const getInscription = (idOrNumber) =>
 export const getContent = (id) =>
   getText(`/content/${id}`);
 
-/** /status → node status. `blessed_inscriptions` is the tip. */
+/**
+ * /status → node status.
+ *
+ * `blessed_inscriptions` is a COUNT, not the highest inscription number: the
+ * newest inscription is `blessed_inscriptions - 1`. That number answers 200 and
+ * carries `next: null`; the count itself 404s.
+ */
 export const getStatus = () =>
   getJson('/status');
 

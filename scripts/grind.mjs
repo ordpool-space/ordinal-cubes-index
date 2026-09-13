@@ -27,6 +27,13 @@ const MAX_ITERATIONS = Number(process.env.MAX_ITERATIONS ?? 5000);
 const STOP_AT_TIP = process.env.STOP_AT_TIP === '1';
 const HEARTBEAT_EVERY = 500;
 
+// Metadata prefetch width. The walk follows `next` one id at a time, so on its
+// own every step pays a full round-trip before the next id is even known.
+// Inscription numbers are contiguous and `next` runs in number order, so the
+// range ahead of the cursor can be fetched in parallel and the walk then reads
+// from memory. The request COUNT upstream is unchanged; only wall-clock moves.
+const CONCURRENCY = Number(process.env.ORD_CONCURRENCY ?? 8);
+
 // Cube content shape — narrow enough to skip the vast majority of inscriptions
 // cheaply on metadata alone.
 const HTML_CONTENT_TYPES = new Set(['text/html;charset=utf-8', 'text/html']);
@@ -45,13 +52,52 @@ function looksLikeCubeShape(meta) {
   return typeof len === 'number' && len >= MIN_LEN && len <= MAX_LEN;
 }
 
+/**
+ * Fetch metadata for the contiguous number range [from, to] with bounded
+ * concurrency, keyed by inscription id.
+ *
+ * The `next` chain remains the source of truth for the walk; this map is only a
+ * cache in front of it. A number that 404s, errors, or turns out not to sit on
+ * the chain is simply absent, and the walk fetches that id directly. So a gap, a
+ * reorg or a cursed inscription costs one request, never correctness.
+ */
+async function prefetchByNumber(from, to) {
+  if (to < from) return new Map();
+
+  const numbers = [];
+  for (let n = from; n <= to; n++) numbers.push(n);
+
+  const byId = new Map();
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < numbers.length) {
+      const n = numbers[nextIndex++];
+      try {
+        const meta = await getInscription(n);
+        if (meta?.id) byId.set(meta.id, meta);
+      } catch {
+        // Absent from the map on purpose: the walk falls back to a live fetch.
+      }
+    }
+  }
+
+  const workers = Math.min(CONCURRENCY, numbers.length);
+  await Promise.all(Array.from({ length: workers }, worker));
+  console.log(`  prefetched ${byId.size}/${numbers.length} ahead (concurrency ${workers})`);
+  return byId;
+}
+
 
 async function main() {
   const startedAt = Date.now();
 
   const cubes = await readJson(CUBES_PATH);
   const cursor = await readJson(CURSOR_PATH);
-  const tip = (await getStatus()).blessed_inscriptions;
+  // blessed_inscriptions is a count, so the newest inscription's number is one
+  // less. Using the count directly overstates the gap and makes the STOP_AT_TIP
+  // comparison below unreachable.
+  const tip = (await getStatus()).blessed_inscriptions - 1;
 
   console.log(`Cursor: ${cursor.lastScannedId} (#${cursor.lastScannedNumber})`);
   console.log(`Tip:    ${tip}  (gap ${(tip - cursor.lastScannedNumber).toLocaleString()})`);
@@ -65,18 +111,28 @@ async function main() {
   try {
     currentMeta = await getInscription(currentId);
   } catch (err) {
-    // ord tip can regress relative to our cursor (upstream reorg,
-    // ord-proxy scrape hiccup that outlasts the retry budget). The
-    // cursor's inscription id genuinely doesn't resolve. Exit cleanly
-    // — the next scheduled run tries again once ord catches back up,
-    // and CI stays green instead of turning red on a transient
-    // upstream state we don't control.
+    // ord tip can regress relative to our cursor (a reorg, or an
+    // upstream hiccup that outlasts the retry budget). The cursor's
+    // inscription id genuinely doesn't resolve. Exit cleanly: the next
+    // scheduled run tries again once ord catches back up, and CI stays
+    // green instead of turning red on a transient upstream state we
+    // don't control.
     if (isNotFoundError(err)) {
       console.warn(`Cursor 404 after retries — ord probably in a rewind window (tip=${tip}, cursor #${cursor.lastScannedNumber}). Exiting clean; the next run will retry.`);
       return;
     }
     throw err;
   }
+
+  // Pull the range ahead of the cursor in parallel, so the walk below reads
+  // metadata from memory instead of paying a round-trip before it can even learn
+  // the next id. Bounded by the same iteration budget the walk uses. Anchored on
+  // currentMeta.number (what ord says) rather than the persisted cursor number.
+  const prefetched = await prefetchByNumber(
+    currentMeta.number + 1,
+    Math.min(tip, currentMeta.number + MAX_ITERATIONS),
+  );
+
   let iter = 0;
   let reachedTip = false;
 
@@ -90,7 +146,7 @@ async function main() {
 
     let nextMeta;
     try {
-      nextMeta = await getInscription(nextId);
+      nextMeta = prefetched.get(nextId) ?? await getInscription(nextId);
     } catch (err) {
       if (isNotFoundError(err)) {
         // Persistent 404 on a mid-walk id: ord isn't going to resolve

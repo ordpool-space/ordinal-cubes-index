@@ -17,7 +17,6 @@ import { existsSync } from 'node:fs';
 import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
-import { ORD_BASE } from './ord.mjs';
 
 /** Inscription id shape the renderer can request at all; anything else is black without a probe. */
 export const INSCRIPTION_ID = /^[0-9a-f]{64}i\d+$/;
@@ -196,8 +195,14 @@ async function runChrome(chrome, html) {
 /**
  * Probes `ids` in batches. Resolves to `{ id → { renderable, width, height } }`
  * for every id that settled; ids of an incomplete batch are absent.
+ *
+ * `base` is required and names the host that serves `/content/<id>`. It has no
+ * default on purpose: the probe must ask the same host the cube renderer and the
+ * mint form ask, so that a side which passes here is not judged differently
+ * there. Callers pass `CONTENT_BASE`.
  */
-export async function probeImages(ids, { base = ORD_BASE, log = () => {} } = {}) {
+export async function probeImages(ids, { base, log = () => {} } = {}) {
+  if (!base) throw new Error('probeImages: `base` is required (the host serving /content/<id>)');
   const result = {};
   if (ids.length === 0) return result;
   const chrome = findChrome();
