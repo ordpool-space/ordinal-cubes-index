@@ -13,12 +13,10 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { computeRarity } from './score.mjs';
 import { ensureSides, loadSides, saveSides } from './sides.mjs';
+import { DATA_DIR } from './data-dir.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(__dirname, '..', 'data');
 const CUBES_PATH = path.join(DATA_DIR, 'cubes.json');
 const RARITY_PATH = path.join(DATA_DIR, 'rarity.json');
 

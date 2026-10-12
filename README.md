@@ -153,6 +153,19 @@ STOP_AT_TIP=1 npm run grind          # stop the moment we reach the tip
 
 `ORD_BASE` env var overrides the default ord endpoint (`https://ord.ordpool.space`) — useful for running against a local ord during dev.
 
+The same scripts index any chain whose hosts they are pointed at:
+
+| Variable | Default | What it points at |
+|---|---|---|
+| `DATA_DIR` | `data/` | where `cubes.json`, `cursor.json`, `sides.json` and `rarity.json` are read and written |
+| `ORD_BASE` | `https://ord.ordpool.space` | the ord the grind walks |
+| `ESPLORA_BASE` | `https://api.ordpool.space/api` | the esplora `firstOwner` is read from |
+| `CONTENT_BASE` | `https://api.ordpool.space` | where the rarity run fetches and probes side content |
+| `ARCHIVE_BASE` | the archive on GitHub Pages | the Magic Eden reverse index; a `file://` path that does not exist means no collection is known |
+| `CUBE_RENDERER_ID_V3` | the mainnet v3 renderer | the v3 renderer's id on that chain, in the v3 slot |
+
+cubes-frontend's regtest lanes run `grind.mjs` and `rarity.mjs` this way against their own regtest stack, at a sha pinned in that repo (`apps/cubes-frontend/e2e/regtest/cubes-index.env`). The grind needs a `cursor.json` and an empty `cubes.json` to start from, and examines every inscription after the cursor's.
+
 ## Consuming the index
 
 Anything that wants to know what cubes exist:

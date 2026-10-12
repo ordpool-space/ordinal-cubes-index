@@ -4,10 +4,15 @@
 
 const CUBE_REGEX = /^<html><!--cubes\.haushoppe\.art-->(<head><title>([^<>]*)<\/title><\/head>)?<body><script>t='([^']*)'<\/script><script src=\/content\/([^>]*)><\/script>$/;
 
+// `CUBE_RENDERER_ID_V3` names the v3 renderer on a chain where it has another
+// id: on a regtest stack the renderer is inscribed by the stack's own bootstrap.
+// It takes the v3 SLOT, the same as cubes-frontend's `parseCube` does with its
+// environment's renderer id, so such a cube still reads as v3. An appended
+// fourth entry would report it as v4.
 export const CUBE_RENDERER_IDS = [
   '9475aa8df559d569f7284ce59e97014f28be758e832e212fdbba0202699dd035i0', // v1
   '4c5b32a1bd0dc43b3540097bf0135de6b0389f55fe6fe06910e5393bf6591a42i0', // v2
-  'fed0eb2d943b1b6ce83c1d7bfb4639d3d44c7fdb161b1037c2fadaf630e55a55i0', // v3
+  process.env.CUBE_RENDERER_ID_V3 || 'fed0eb2d943b1b6ce83c1d7bfb4639d3d44c7fdb161b1037c2fadaf630e55a55i0', // v3
 ];
 
 /**

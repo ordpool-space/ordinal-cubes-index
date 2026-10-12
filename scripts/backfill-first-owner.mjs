@@ -12,11 +12,10 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
+import { DATA_DIR } from './data-dir.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const CUBES_PATH = path.resolve(__dirname, '..', 'data', 'cubes.json');
+const CUBES_PATH = path.join(DATA_DIR, 'cubes.json');
 
 const REQUEST_DELAY_MS = Number(process.env.REQUEST_DELAY_MS ?? 100);
 const FLUSH_EVERY = Number(process.env.FLUSH_EVERY ?? 25);

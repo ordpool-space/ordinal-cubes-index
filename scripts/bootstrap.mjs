@@ -13,16 +13,14 @@
 import { gunzipSync } from 'node:zlib';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { getInscription, getContent, getStatus } from './ord.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
+import { DATA_DIR } from './data-dir.mjs';
 
 const ME_ARCHIVE_URL =
   'https://ordpool-space.github.io/magic-eden-ordinals-archive/inscriptions/ordinal-cubes-by-haus-hoppe.csv.gz';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = path.resolve(__dirname, '..', 'data');
 
 const CONCURRENCY = 12;
 

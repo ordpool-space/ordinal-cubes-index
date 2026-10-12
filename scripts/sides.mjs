@@ -31,12 +31,11 @@
 
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { lookupCollections } from './collections.mjs';
 import { INSCRIPTION_ID, probeImages } from './probe.mjs';
+import { DATA_DIR } from './data-dir.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-export const SIDES_PATH = path.resolve(__dirname, '..', 'data', 'sides.json');
+export const SIDES_PATH = path.join(DATA_DIR, 'sides.json');
 
 export const CONTENT_BASE = process.env.CONTENT_BASE || 'https://api.ordpool.space';
 const HEAD_CONCURRENCY = Number(process.env.HEAD_CONCURRENCY ?? 4);
