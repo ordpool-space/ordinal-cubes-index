@@ -17,13 +17,15 @@
 // not a concern, but be polite — start at modest concurrency and watch ord
 // CPU. Re-runnable: each batch commits progress.
 
-import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { getInscription, getContent, getStatus } from './ord.mjs';
 import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
 import { DATA_DIR } from './data-dir.mjs';
+import { readJson, writeJson } from './json-io.mjs';
+import { looksLikeCubeShape } from './cube-shape.mjs';
+import { runMain } from './cli.mjs';
 
 const CUBES_PATH = path.join(DATA_DIR, 'cubes.json');
 const CURSOR_PATH = path.join(DATA_DIR, 'cursor.json');
@@ -31,23 +33,9 @@ const CURSOR_PATH = path.join(DATA_DIR, 'cursor.json');
 const CONCURRENCY = Number(process.env.CONCURRENCY ?? 20);
 const BATCH_COMMIT = Number(process.env.BATCH_COMMIT ?? 10000);
 
-const HTML_CONTENT_TYPES = new Set(['text/html;charset=utf-8', 'text/html']);
-const MIN_LEN = 400;
-const MAX_LEN = 900;
-
 const JUBILEE_INSCRIPTION_NUMBER = 73_534_344; // approx — first post-jubilee number
 
 // ---------------------------------------------------------------------------
-
-async function readJson(p) { return JSON.parse(await readFile(p, 'utf-8')); }
-async function writeJson(p, v) { await writeFile(p, JSON.stringify(v, null, 2) + '\n'); }
-
-function looksLikeCubeShape(meta) {
-  if (!HTML_CONTENT_TYPES.has((meta.content_type ?? '').toLowerCase())) return false;
-  const len = meta.content_length;
-  return typeof len === 'number' && len >= MIN_LEN && len <= MAX_LEN;
-}
-
 
 async function checkOne(n) {
   let meta;
@@ -174,7 +162,4 @@ async function main() {
   console.log(`  Took:           ${((Date.now() - startedAt) / 1000).toFixed(0)}s`);
 }
 
-main().catch((err) => {
-  console.error('FATAL:', err);
-  process.exit(1);
-});
+runMain(main);

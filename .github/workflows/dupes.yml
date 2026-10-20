@@ -1,0 +1,22 @@
+name: Duplicate Check
+
+# jscpd is offline and deterministic, so it runs in CI on every main push to
+# keep the no-duplication rule enforced. The grinder workflow writes data and
+# needs the chain; this one needs neither.
+on:
+  push:
+    branches: [main]
+
+jobs:
+
+  dupes:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v6
+      with:
+        node-version: 22
+    - run: npm ci
+    - run: npm run dupes

@@ -10,13 +10,15 @@
 //
 // Designed to be idempotent: re-running with no new inscriptions is a no-op.
 
-import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { getInscription, getContent, getStatus, isNotFoundError } from './ord.mjs';
 import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
 import { DATA_DIR } from './data-dir.mjs';
+import { readJson, writeJson } from './json-io.mjs';
+import { looksLikeCubeShape } from './cube-shape.mjs';
+import { runMain } from './cli.mjs';
 
 const CUBES_PATH = path.join(DATA_DIR, 'cubes.json');
 const CURSOR_PATH = path.join(DATA_DIR, 'cursor.json');
@@ -32,23 +34,7 @@ const HEARTBEAT_EVERY = 500;
 // from memory. The request COUNT upstream is unchanged; only wall-clock moves.
 const CONCURRENCY = Number(process.env.ORD_CONCURRENCY ?? 8);
 
-// Cube content shape — narrow enough to skip the vast majority of inscriptions
-// cheaply on metadata alone.
-const HTML_CONTENT_TYPES = new Set(['text/html;charset=utf-8', 'text/html']);
-const MIN_LEN = 400;
-const MAX_LEN = 900;
-
 // ---------------------------------------------------------------------------
-
-async function readJson(p) {
-  return JSON.parse(await readFile(p, 'utf-8'));
-}
-
-function looksLikeCubeShape(meta) {
-  if (!HTML_CONTENT_TYPES.has((meta.content_type ?? '').toLowerCase())) return false;
-  const len = meta.content_length;
-  return typeof len === 'number' && len >= MIN_LEN && len <= MAX_LEN;
-}
 
 /**
  * Fetch metadata for the contiguous number range [from, to] with bounded
@@ -213,7 +199,7 @@ async function main() {
   if (foundThisRun.length > 0) {
     cubes.push(...foundThisRun);
     const renamed = applyPositionalNames(cubes);
-    await writeFile(CUBES_PATH, JSON.stringify(renamed, null, 2) + '\n');
+    await writeJson(CUBES_PATH, renamed);
   }
 
   const newCursor = {
@@ -225,7 +211,7 @@ async function main() {
     lastScanAt: new Date().toISOString(),
     source: 'grind',
   };
-  await writeFile(CURSOR_PATH, JSON.stringify(newCursor, null, 2) + '\n');
+  await writeJson(CURSOR_PATH, newCursor);
 
   console.log('');
   console.log('='.repeat(60));
@@ -240,7 +226,4 @@ async function main() {
   console.log(`  Took:           ${((Date.now() - startedAt) / 1000).toFixed(1)}s`);
 }
 
-main().catch((err) => {
-  console.error('FATAL:', err);
-  process.exit(1);
-});
+runMain(main);

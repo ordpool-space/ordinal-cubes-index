@@ -16,6 +16,7 @@ import path from 'node:path';
 import { computeRarity } from './score.mjs';
 import { ensureSides, loadSides, saveSides } from './sides.mjs';
 import { DATA_DIR } from './data-dir.mjs';
+import { runMain } from './cli.mjs';
 
 const CUBES_PATH = path.join(DATA_DIR, 'cubes.json');
 const RARITY_PATH = path.join(DATA_DIR, 'rarity.json');
@@ -51,7 +52,4 @@ async function main() {
   console.log(`  Took:           ${((Date.now() - startedAt) / 1000).toFixed(1)}s`);
 }
 
-main().catch((err) => {
-  console.error('FATAL:', err);
-  process.exit(1);
-});
+runMain(main);

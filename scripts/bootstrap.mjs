@@ -17,6 +17,7 @@ import { getInscription, getContent, getStatus } from './ord.mjs';
 import { parseCube } from './parse-cube.mjs';
 import { applyPositionalNames } from './sort.mjs';
 import { DATA_DIR } from './data-dir.mjs';
+import { runMain } from './cli.mjs';
 
 const ME_ARCHIVE_URL =
   'https://ordpool-space.github.io/magic-eden-ordinals-archive/inscriptions/ordinal-cubes-by-haus-hoppe.csv.gz';
@@ -152,7 +153,4 @@ async function main() {
   console.log(`  Took:            ${((Date.now() - startedAt) / 1000).toFixed(1)}s`);
 }
 
-main().catch((err) => {
-  console.error('FATAL:', err);
-  process.exit(1);
-});
+runMain(main);

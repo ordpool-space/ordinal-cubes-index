@@ -10,18 +10,15 @@
 // api.ordpool.space is our own backend (see workspace CLAUDE.md), so
 // rate-limit choice is on us. Serial + small delay keeps things gentle.
 
-import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { getFirstOwnerAddress, revealTxidFromInscriptionId } from './esplora.mjs';
 import { DATA_DIR } from './data-dir.mjs';
+import { readJson, writeJson } from './json-io.mjs';
 
 const CUBES_PATH = path.join(DATA_DIR, 'cubes.json');
 
 const REQUEST_DELAY_MS = Number(process.env.REQUEST_DELAY_MS ?? 100);
 const FLUSH_EVERY = Number(process.env.FLUSH_EVERY ?? 25);
-
-async function readJson(p) { return JSON.parse(await readFile(p, 'utf-8')); }
-async function writeJson(p, v) { await writeFile(p, JSON.stringify(v, null, 2) + '\n'); }
 
 async function main() {
   const cubes = await readJson(CUBES_PATH);
