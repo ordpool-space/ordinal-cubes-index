@@ -1,0 +1,42 @@
+name: Test
+
+# The unit tests stub every fetch and need neither the chain nor the network.
+# The paths filter skips the grinder's own commits, which touch data/ only.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/test.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/test.yml'
+
+# Harden installs against transient registry blips like ECONNRESET: retry more
+# times over a longer backoff window than npm's default of 2. npm and pnpm both
+# read these npm_config_* values.
+env:
+  npm_config_fetch_retries: "5"
+  npm_config_fetch_retry_mintimeout: "20000"
+  npm_config_fetch_retry_maxtimeout: "120000"
+  npm_config_fetch_timeout: "600000"
+
+jobs:
+
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - uses: actions/setup-node@v6
+      with:
+        node-version: 26
+    - run: npm ci
+    - run: npm test
